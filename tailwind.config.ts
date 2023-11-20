@@ -1,0 +1,88 @@
+export default {
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui'),
+    require('tailwindcss-hero-patterns')
+  ],
+
+  daisyui: {
+    themes: [
+      {
+        light: {
+          "color-scheme": "light",
+          "primary": "#DEBD88",
+          "secondary": "#49A078",
+          "accent": "#D7263D",
+          "neutral": "#1A1919",
+          "base-dark": "#080706",
+          "base-light": "#F2F2F2",
+          "base-100": "#ffffff",
+          "base-200": "#F2F2F2",
+          "base-300": "#E5E6E6",
+          "base-content": "#080706",
+          "info": "#3abff8",
+          "success": "#49A078",
+          "warning": "#fbbd23",
+          "error": "#D7263D",
+        },
+      },
+      {
+        dark: {
+          "color-scheme": "dark",
+          "primary": "#DEBD88",
+          "secondary": "#49A078",
+          "accent": "#D7263D",
+          "neutral": "#E5E6E6",
+          "base-dark": "#080706",
+          "base-light": "#F2F2F2",
+          "base-100": "#1A1919",
+          "base-200": "#080706",
+          "base-300": "#000000",
+          "base-content": "#ffffff",
+          "info": "#3abff8",
+          "success": "#49A078",
+          "warning": "#fbbd23",
+          "error": "#D7263D",
+        },
+      },
+      // {
+      //   light: {
+      //     "color-scheme": "light",
+      //     "primary": "#66cc8a",
+      //     "secondary": "#377cfb",
+      //     "accent": "#ea5234",
+      //     "neutral": "#333c4d",
+      //     "base-dark": "#1A1919",
+      //     "base-light": "#F2F2F2",
+      //     "base-100": "#ffffff",
+      //     "base-200": "#F2F2F2",
+      //     "base-300": "#E5E6E6",
+      //     "base-content": "#1f2937",
+      //     "info": "#3abff8",
+      //     "success": "#36d399",
+      //     "warning": "#fbbd23",
+      //     "error": "#f87272",
+      //   },
+      // },
+      // {
+      //   dark: {
+      //     "color-scheme": "dark",
+      //     "primary": "#66cc8a",
+      //     "secondary": "#377cfb",
+      //     "accent": "#ea5234",
+      //     "neutral": "#E5E6E6",
+      //     "base-dark": "#1A1919",
+      //     "base-light": "#F2F2F2",
+      //     "base-100": "#1A1919",
+      //     "base-200": "#0D0D0D",
+      //     "base-300": "#000000",
+      //     "base-content": "#ffffff",
+      //     "info": "#3abff8",
+      //     "success": "#36d399",
+      //     "warning": "#fbbd23",
+      //     "error": "#f87272",
+      //   },
+      // },
+    ],
+  }
+}

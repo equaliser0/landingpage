@@ -1,0 +1,29 @@
+### ecosis ###
+
+
+### NuxtJS ###
+# Generated dirs
+dist
+.nuxt
+.nuxt-*
+.output
+.gen
+
+# Node dependencies
+node_modules
+
+# System files
+*.log
+
+# End of https://www.toptal.com/developers/gitignore/api/nuxtjs
+
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+.DS_Store
+.firebase/*
