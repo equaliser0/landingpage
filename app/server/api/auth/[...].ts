@@ -7,7 +7,7 @@ const databaseManager = useDatabaseManager()
 
 export default NuxtAuthHandler({
     // secret needed to run nuxt-auth in production mode (used to encrypt data)
-    secret: process.env.NUXT_SECRET || 'crowned',
+    secret: process.env.NUXT_SECRET || 'nujin',
     pages: {    // Change the default behavior to use `/login` as the path for the sign-in page
       signIn: '/login'
     },
