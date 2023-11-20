@@ -187,20 +187,8 @@ onMounted(() => {
         <span>{{ notification.msg }}</span>
       </div>
     </div>
-
-    <div class="w-screen h-screen flex justify-center items-center bg-[url(/uploads/shop/banner.webp)] bg-cover bg-fixed bg-center bg-no-repeat text-center" v-if="!route.path.startsWith('/login') && lockedScreen && status === 'unauthenticated'">
-      <div class="flex flex-col items-center w-full bg-base-200/70 backdrop-blur-md py-8">
-        <img class="h-32" :src="`/${(themeStore.colorMode.preference === 'dark') ? 'logo.png' : 'logo_dark.png' }`" alt="The Crowned Lion">
-        <h1 class="text-2xl font-bold pb-4">Willkommen</h1>
-        <p>Was schönen wird hier gebastelt. <br> <b>Gib deine E-Mail Adresse ein und <br> werde benachrichtig, wenn der Shop online geht!</b></p>
-        <div class="flex items-center mb-2 mt-8">
-          <input class="input input-bordered w-[400px] mr-1" placeholder="E-Mail" v-model="email" @keydown.enter.prevent="subscribing()">
-          <button class="btn btn-primary" @click="subscribing()">Enter</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="w-full" v-else>
+    
+    <div class="w-full">
       <!-- Navbar -->
       <div class="flex flex-col justify-center items-center w-full mb-4 fixed z-40 z-50 w-full" :class="{ 'bg-none': route.path === '/shop' }">
         <div class="navbar w-full">
