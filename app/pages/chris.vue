@@ -14,7 +14,7 @@ definePageMeta({
 
         <!-- Profile Image -->
         <div class="mx-auto w-32 h-32 bg-neutral rounded-full overflow-hidden outline outline-offset-2">
-          <img src="https://chris.ecosis.network/files/Xwi2wY2pszBbPRIB46WokYqbE_002.webp" alt="Profile Image" class="w-full h-full object-cover" />
+          <img src="https://media.licdn.com/dms/image/D5603AQFjDCUDnFeLUw/profile-displayphoto-shrink_800_800/0/1690816380812?e=1706140800&v=beta&t=5UuS8lTw8OkErD8z6EjHOu6Cfizp0neGh7nPqQSOqWQ" alt="Profile Image" class="w-full h-full object-cover" />
         </div>
 
         <h2 class="text-xl font-bold text-accent relative z-10 mt-4 -mb-6">Autonomous</h2>
@@ -52,14 +52,29 @@ definePageMeta({
               </ul>
             </div>
 
-            <div class="w-64">
-              <h3 class="text-xl font-bold text-primary">Interests</h3>
-              <ul class="list-disc pl-6">
-                <li>Innovative Technologies</li>
-                <li>Musical Exploration</li>
-                <li>Business Strategy</li>
-                <li>Creative Design</li>
-              </ul>
+            <div class="w-auto">
+              <div class=" flex flex-wrap justify-end md:justify-start bg-base-300 rounded m-2 p-2 flex inline">
+                <h3 class="w-full">
+                  Interests
+                </h3>
+                <span class="badge badge-neutral m-1 w-auto">Large Language Models</span>
+                <span class="badge badge-neutral m-1 w-auto">Artificial Intelligence</span>
+                <span class="badge badge-neutral m-1 w-auto">Business Execution</span>
+                <span class="badge badge-neutral m-1 w-auto">Process Automation</span>
+                <span class="badge badge-neutral m-1 w-auto">Web Aplications</span>
+                <span class="badge badge-neutral m-1 w-auto">Fullstack Development</span>
+                <span class="badge badge-neutral m-1 w-auto">Microservice APIs</span>
+                <span class="badge badge-neutral m-1 w-auto">Blockchain</span>
+                <span class="badge badge-neutral m-1 w-auto">Crypto</span>
+                <span class="badge badge-neutral m-1 w-auto">DeFi</span>
+                <span class="badge badge-neutral m-1 w-auto">Web3</span>
+                <span class="badge badge-neutral m-1 w-auto">FinTech</span>
+                <span class="badge badge-neutral m-1 w-auto">Decentralization</span>
+                <span class="badge badge-neutral m-1 w-auto">Digitization</span>
+                <span class="badge badge-neutral m-1 w-auto">Globalization</span>
+                <span class="badge badge-neutral m-1 w-auto">Economics</span>
+                <span class="badge badge-neutral m-1 w-auto">Investments</span>
+              </div>
             </div>
           </div>
         </div>
@@ -68,8 +83,8 @@ definePageMeta({
 
     <!-- Projects Section -->
     <section class="py-16 bg-base-200/50 backdrop-blur-xl">
-      <div class="container mx-auto">
-        <h2 class="text-3xl font-bold mb-8">Businesses</h2>
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Projects</h2>
 
         <!-- Project Cards with Carousel -->
         <div class="carousel w-full">
@@ -96,7 +111,22 @@ definePageMeta({
                   <img src="https://chris.ecosis.network/files/Xwi2wY2pszBbPRIB46WokYqbE_002.webp" alt="Profile Image" class="w-full h-full object-cover" />
                 </div>
                 <div class="card-body text-center">
-                  <h2 class="text-3xl font-bold">nujin Solutions</h2>
+                  <h2 class="text-3xl font-bold">enjine Development</h2>
+                  <p>Custom Software Development specialized to CMS like Data Management System and AI.</p>
+                  <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Visit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-12 w-[600px] h-[360px]">
+              <div class="card card-compact bg-base-100 shadow-xl">
+                <div class="mx-auto w-32 h-32 bg-neutral rounded-full overflow-hidden outline outline-offset-2 -mt-4">
+                  <img src="https://chris.ecosis.network/files/Xwi2wY2pszBbPRIB46WokYqbE_002.webp" alt="Profile Image" class="w-full h-full object-cover" />
+                </div>
+                <div class="card-body text-center">
+                  <h2 class="text-3xl font-bold">nuin</h2>
                   <p>CMS like fullstack Nodejs Data Management System customized for businesses individually.</p>
                   <div class="card-actions justify-end">
                     <button class="btn btn-primary">Visit</button>
@@ -105,34 +135,35 @@ definePageMeta({
               </div>
             </div>
 
-            <!-- <div class="p-2">
+            <div class="p-12 w-[600px] h-[360px]">
               <div class="card card-compact bg-base-100 shadow-xl">
-                <figure><img src="/images/project-1.jpg" alt="Project 1" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Project 1</h2>
-                  <p>Description of Project 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="mx-auto w-32 h-32 bg-neutral rounded-full overflow-hidden outline outline-offset-2 -mt-4">
+                  <img src="https://chris.ecosis.network/files/Xwi2wY2pszBbPRIB46WokYqbE_002.webp" alt="Profile Image" class="w-full h-full object-cover" />
+                </div>
+                <div class="card-body text-center">
+                  <h2 class="text-3xl font-bold">equaliser</h2>
+                  <p>Club Music DJ and Producer -<br>Ghetto Bass: Ghetto House, HipHop, Techno, Drum & Bass</p>
                   <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Details</button>
+                    <button class="btn btn-primary">Visit</button>
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
+
           </div>
         </div>
-
-        <!-- Project Indicators -->
-        <!-- <div class="flex justify-center w-full py-2 gap-2 mt-4">
-          <a href="#project1" class="btn btn-xs">1</a>
-          <a href="#project2" class="btn btn-xs">2</a>
-          <a href="#project3" class="btn btn-xs">3</a>
-        </div> -->
       </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 bg-base-100">
+      <Contact/>
     </section>
 
     <!-- Music Section -->
     <section class="bg-base-200 py-16">
       <div class="container mx-auto pb-8">
-        <h2 class="text-3xl font-bold mb-8 text-neutral">Music</h2>
+        <h2 class="text-3xl font-bold mb-8 text-neutral">Mediathek</h2>
         <!-- Blog Post List -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="card card-compact bg-base-100 shadow-xl">

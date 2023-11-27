@@ -10,7 +10,7 @@ export default {
       {
         light: {
           "color-scheme": "light",
-          "primary": "#DEBD88",
+          "primary": "#fbbd23",
           "secondary": "#49A078",
           "accent": "#D7263D",
           "neutral": "#1A1919",
@@ -29,7 +29,7 @@ export default {
       {
         dark: {
           "color-scheme": "dark",
-          "primary": "#DEBD88",
+          "primary": "#fbbd23",
           "secondary": "#49A078",
           "accent": "#D7263D",
           "neutral": "#E5E6E6",
