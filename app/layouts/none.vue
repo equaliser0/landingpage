@@ -2,7 +2,8 @@
 </script>
 
 <template>
-  <div>
+  <div ref="el" :style="{ 'font-family': 'Blinker' }" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Blinker">
     <slot/>
   </div>
 </template>

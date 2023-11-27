@@ -161,7 +161,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="el">
+  <div ref="el" :style="{ 'font-family': 'Blinker' }" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Blinker">
 
     <!-- Cookies -->
     <div class="bottom-10 z-50 fixed w-full flex justify-center" v-if="!cookie">
@@ -187,7 +188,7 @@ onMounted(() => {
         <span>{{ notification.msg }}</span>
       </div>
     </div>
-    
+
     <div class="w-full">
       <!-- Navbar -->
       <div class="flex flex-col justify-center items-center w-full mb-4 fixed z-40 z-50 w-full" :class="{ 'bg-none': route.path === '/shop' }">
@@ -231,10 +232,10 @@ onMounted(() => {
 
           <!-- Navbar Center -->
           <div class="navbar-center md:w-2/3 flex justify-center">
-            <searchbar v-if="searchbar"/>
-            <NuxtLink class=" btn btn-ghost normal-case text-xl font-thin flex justify-center" to="/shop" v-if="!searchbar">
-              <img class="h-12" :src="`/${(themeStore.colorMode.preference === 'dark') ? 'logo.png' : 'logo_dark.png' }`" alt="The Crowned Lion">
+            <NuxtLink class=" btn btn-ghost btn-circle normal-case text-xl font-thin flex justify-center" to="/shop" v-if="!searchbar">
+              <img class="object-cover" :src="`/${(themeStore.colorMode.preference === 'dark') ? 'logo.png' : 'logo_dark.png' }`" alt="The Crowned Lion">
             </NuxtLink>
+            <searchbar v-if="searchbar"/>
           </div>
 
           <!-- Navbar End -->

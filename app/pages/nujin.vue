@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const router = useRouter()
-// Orbitron
-// Gruppo
+definePageMeta({
+  layout: 'none'
+})
 </script>
 <template>
-  <div :style="{ 'font-family': 'Blinker' }" class="w-full h-full text-primary-100">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Blinker">
+  <div class="w-full h-full text-primary-100">
     <!-- Hero -->
-    <section class="text-white py-8 h-screen text-center shadow bg-[url(/uploads/nujin_hero.webp)] bg-no-repeat bg-cover bg-center">
+    <section class="text-white py-8 h-screen text-center shadow bg-[url(/uploads/landing/nujin/banner.jpg)] bg-cover bg-fixed">
       <div class="container mx-auto flex flex-wrap items-end justify-center h-full">
         <div class="w-full">
           <div class="w-full py-6">
@@ -23,22 +23,28 @@ const router = useRouter()
     </section>
 
     <!-- About -->
-    <section class="bg-base-200 py-20">
+    <section class="bg-base-100 py-20 text-center">
       <div class="container mx-auto">
         <div class="flex">
-          <div class="w-1/3">
-            <!-- <img src="" alt="About Image" class="w-full"> -->
-          </div>
-          <div class="w-2/3 pl-10">
+          <div class="w-full">
             <h2 class="text-3xl font-bold">About</h2>
             <p class="text-lg mt-4">It's a CMS like out-of-the-box and ready-to-use fullstack data management system boilerplate built with</p>
-            <div class="flex justify-around p-8">
-              <img src="https://www.svgrepo.com/show/354131/nuxt-icon.svg" class="w-24 h-24">
-              <img src="https://www.svgrepo.com/show/374118/tailwind.svg" class="w-24 h-24">
-              <img src="https://www.svgrepo.com/show/353995/leveldb.svg" class="w-24 h-24">
-              <img src="https://www.svgrepo.com/show/303600/typescript-logo.svg" class="w-24 h-24">
-            </div>
           </div>
+          <div class="">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integrated -->
+    <section class="bg-base-200">
+      <div class="container mx-auto">
+        <div class="flex justify-center p-8">
+          <img src="https://www.svgrepo.com/show/354131/nuxt-icon.svg" class="w-16 h-16 mx-8">
+          <img src="https://www.svgrepo.com/show/374118/tailwind.svg" class="w-16 h-16 mx-8">
+          <img src="https://www.svgrepo.com/show/353995/leveldb.svg" class="w-16 h-16 mx-8">
+          <img src="https://www.svgrepo.com/show/303600/typescript-logo.svg" class="w-16 h-16 mx-8">
         </div>
       </div>
     </section>
@@ -132,9 +138,9 @@ const router = useRouter()
               <p class="mt-4 text-lg text-gray-300">
                 We customize versions for your business needs within the same month and 10x less costs!
               </p>
-              <a href="https://example.com/boilerplate-download" class="mt-8 inline-flex items-center px-6 py-3 border border-green-400 text-base font-medium rounded-full text-white bg-green-600 hover:bg-indigo-700">
+              <NuxtLink to="/#contact" class="mt-8 inline-flex items-center px-6 py-3 border border-green-400 text-base font-medium rounded-full text-white bg-green-600 hover:bg-indigo-700">
                 Contact Us
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
