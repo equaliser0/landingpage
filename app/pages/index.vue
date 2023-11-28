@@ -7,7 +7,7 @@ definePageMeta({
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="flex bg-primary text-neutral py-8 text-center bg-[url(/uploads/landing/banner.jpg)] bg-cover h-screen antialiased">
+    <section class="flex bg-base-300 text-neutral py-8 text-center bg-[url(/uploads/landing/banner.jpg)] bg-cover h-screen antialiased">
       <div class="block md:hidden w-full pt-8 flex flex-col justify-start">
         <h1 class="text-4xl font-bold text-4xl md:text-6xl md:text-left">enjine <br> Development</h1>
         <p class="mt-4 text-base md:text-5xl md:text-left">Cost saving Data Management and Automation</p>
@@ -15,7 +15,7 @@ definePageMeta({
           <NuxtLink to="/nujin" class="btn btn-white btn-outline">Learn More</NuxtLink>
         </div>
       </div>
-      <div class="hidden md:block w-full md:w-1/2 p-24 flex flex-col justify-start">
+      <div class="hidden md:block w-full md:w-1/2 p-24 flex flex-col justify-end">
         <h1 class="text-5xl font-bold text-4xl md:text-6xl md:text-left">enjine Development</h1>
         <p class="mt-4 text-base md:text-5xl md:text-left">We build. You enjoy.</p>
         <div class="w-full flex justify-center md:justify-start pt-4">
@@ -24,7 +24,7 @@ definePageMeta({
       </div>
       <div class="hidden md:block w-full md:w-1/2 p-12 text-gray-900 h-full flex flex-col justify-end md:text-right">
         <p class="text-2xl">Dont get left behind with</p>
-        <h1 class="text-4xl font-bold text-4xl font-light md:text-8xl">Don't get <br><b class="font-bold">left behind</b></h1>
+        <h1 class="text-4xl font-bold text-xl font-light md:text-4xl">And leverage <br><b class="font-bold">your business <br> to the next level</b></h1>
         <!-- <p class="mt-4 text-base md:text-5xl md:text-right">At Its Best.</p> -->
       </div>
     </section>
