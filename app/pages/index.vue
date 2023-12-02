@@ -259,7 +259,7 @@
     <!-- CTA Subscription -->
     <section class="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32" data-aos="fade-up" data-aos-delay="100">
       <div class="absolute inset-0">
-        <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left" src="https://cdn.rareblocks.xyz/collection/celebration/images/cta/5/girl-working-on-laptop.jpg" alt="" />
+        <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left" src="https://images.pexels.com/photos/7873571/pexels-photo-7873571.jpeg?auto=compress" alt="" />
       </div>
 
       <div class="absolute inset-0 hidden bg-gradient-to-r md:block from-black to-transparent"></div>
@@ -268,8 +268,8 @@
 
       <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center md:w-2/3 lg:w-1/2 xl:w-1/3 md:text-left">
-          <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Get full access to Celebration</h2>
-          <p class="mt-4 text-base text-gray-200" data-aos="fade-up" data-aos-delay="100">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam.</p>
+          <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Stay up-to-date</h2>
+          <p class="mt-4 text-base text-gray-200" data-aos="fade-up" data-aos-delay="100">And receive the newest insights and opportunities like bonuses and more.</p>
 
           <form action="#" method="POST" class="mt-8 lg:mt-12" data-aos="zoom-out" data-aos-delay="100">
             <div class="flex flex-col items-center sm:flex-row sm:justify-center">
@@ -292,7 +292,7 @@
                 </div>
               </div>
 
-              <button type="submit" class="inline-flex items-center justify-center flex-shrink-0 w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md sm:mt-0 sm:rounded-l-none sm:w-auto hover:bg-blue-700 focus:bg-blue-700">
+              <button type="submit" class="inline-flex items-center justify-center flex-shrink-0 w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-accent border border-transparent rounded-md sm:mt-0 sm:rounded-l-none sm:w-auto hover:bg-info focus:bg-info">
                 Get instant access
               </button>
             </div>
@@ -315,14 +315,12 @@
                         <div class="flex items-center">
                             <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/gmail-logo.png" alt="" />
                             <div class="ml-5 mr-auto">
-                                <p class="text-xl font-semibold text-black">Gmail</p>
-                                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+                                <p class="text-xl font-semibold text-black">Nuxt 3</p>
+                                <p class="mt-px text-sm text-gray-600">Fullstack Framework</p>
                             </div>
-                            <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"></rect><path fill="#00DC82" d="M138.787 189.333h68.772c2.184.001 4.33-.569 6.222-1.652a12.374 12.374 0 0 0 4.554-4.515a12.236 12.236 0 0 0-.006-12.332l-46.185-79.286a12.388 12.388 0 0 0-4.553-4.514a12.53 12.53 0 0 0-12.442 0a12.388 12.388 0 0 0-4.553 4.514l-11.809 20.287l-23.09-39.67a12.386 12.386 0 0 0-4.555-4.513a12.536 12.536 0 0 0-12.444 0a12.391 12.391 0 0 0-4.555 4.513L36.67 170.834a12.245 12.245 0 0 0-1.67 6.165c0 2.165.573 4.292 1.665 6.167a12.374 12.374 0 0 0 4.554 4.515a12.513 12.513 0 0 0 6.222 1.652h43.17c17.104 0 29.718-7.446 38.397-21.973l21.072-36.169l11.287-19.356l33.873 58.142h-45.16l-11.293 19.356Zm-48.88-19.376l-30.127-.007l45.16-77.518l22.533 38.759l-15.087 25.906c-5.764 9.426-12.312 12.86-22.48 12.86Z" style="--darkreader-inline-fill: #00b068;" data-darkreader-inline-fill=""></path></g>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Sophisticated backbone of your app for maximum performance and flexibility.</p>
                     </div>
                 </div>
 
@@ -331,14 +329,12 @@
                         <div class="flex items-center">
                             <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/slack-logo.png" alt="" />
                             <div class="ml-5 mr-auto">
-                                <p class="text-xl font-semibold text-black">Slack</p>
-                                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+                                <p class="text-xl font-semibold text-black">Supabase</p>
+                                <p class="mt-px text-sm text-gray-600">Database instance</p>
                             </div>
-                            <svg class="block w-6 h-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"></rect><g clip-path="url(#iconifyVue2)"><path fill="url(#iconifyVue0)" d="M144.757 223.193c-5.061 6.373-15.323 2.881-15.445-5.257l-1.783-119.029h80.035c14.496 0 22.581 16.744 13.567 28.097l-76.374 96.189Z"></path><path fill="url(#iconifyVue1)" fill-opacity=".2" d="M144.757 223.193c-5.061 6.373-15.323 2.881-15.445-5.257l-1.783-119.029h80.035c14.496 0 22.581 16.744 13.567 28.097l-76.374 96.189Z"></path><path fill="#3ECF8E" d="M112.207 31.666c5.061-6.375 15.323-2.882 15.445 5.256l.782 119.029H49.4c-14.497 0-22.582-16.744-13.567-28.097l76.374-96.188Z" style="--darkreader-inline-fill: #4fd398;" data-darkreader-inline-fill=""></path></g><defs><linearGradient id="iconifyVue0" x1="127.529" x2="198.661" y1="125.299" y2="155.132" gradientUnits="userSpaceOnUse"><stop stop-color="#249361" style="--darkreader-inline-stopcolor: #1d764e;" data-darkreader-inline-stopcolor=""></stop><stop offset="1" stop-color="#3ECF8E" style="--darkreader-inline-stopcolor: #279d75;" data-darkreader-inline-stopcolor=""></stop></linearGradient><linearGradient id="iconifyVue1" x1="95.993" x2="128.433" y1="82.12" y2="143.187" gradientUnits="userSpaceOnUse"><stop></stop><stop offset="1" stop-opacity="0"></stop></linearGradient><clipPath id="iconifyVue2"><path fill="#fff" d="M32 28h192.92v200H32z" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path></clipPath></defs></g>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Opensource, secure and a standard database system for all of your data and your files including authentication and role management. </p>
                     </div>
                 </div>
 
@@ -347,14 +343,12 @@
                         <div class="flex items-center">
                             <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/shopify-logo.png" alt="" />
                             <div class="ml-5 mr-auto">
-                                <p class="text-xl font-semibold text-black">Shopify</p>
-                                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+                                <p class="text-xl font-semibold text-black">TailwindCSS</p>
+                                <p class="mt-px text-sm text-gray-600">A utility-first CSS framework</p>
                             </div>
-                            <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"></rect><path fill="url(#iconifyVue3)" fill-rule="evenodd" d="M83 110c6-24 21.001-36 45-36c36 0 40.5 27 58.5 31.5c12.001 3.001 22.5-1.499 31.5-13.5c-5.999 23.999-21.001 36-45 36c-36 0-40.5-27-58.5-31.5C102.499 93.5 92 98 83 110Zm-45 54c6-23.999 21-36 45-36c36 0 40.5 27 58.5 31.5c12.001 3.001 22.5-1.499 31.5-13.5c-5.999 23.999-21.001 36-45 36c-36 0-40.5-27-58.5-31.5c-12-3.001-22.5 1.499-31.5 13.5Z" clip-rule="evenodd"></path><defs><linearGradient id="iconifyVue3" x1="86.5" x2="163.5" y1="74" y2="185.5" gradientUnits="userSpaceOnUse"><stop stop-color="#32B1C1" style="--darkreader-inline-stopcolor: #288e9a;" data-darkreader-inline-stopcolor=""></stop><stop offset="1" stop-color="#14C6B7" style="--darkreader-inline-stopcolor: #109e92;" data-darkreader-inline-stopcolor=""></stop></linearGradient></defs></g>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Seamless adaptable UI design and a slim ans sexy look.</p>
                     </div>
                 </div>
 
@@ -363,14 +357,12 @@
                         <div class="flex items-center">
                             <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/intercom-logo.png" alt="" />
                             <div class="ml-5 mr-auto">
-                                <p class="text-xl font-semibold text-black">Intercom</p>
-                                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+                                <p class="text-xl font-semibold text-black">Stripe</p>
+                                <p class="mt-px text-sm text-gray-600">Payments integration</p>
                             </div>
-                            <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <path fill="#635BFF" d="M512 110.08c0-36.409-17.636-65.138-51.342-65.138c-33.85 0-54.33 28.73-54.33 64.854c0 42.808 24.179 64.426 58.88 64.426c16.925 0 29.725-3.84 39.396-9.244v-28.445c-9.67 4.836-20.764 7.823-34.844 7.823c-13.796 0-26.027-4.836-27.591-21.618h69.547c0-1.85.284-9.245.284-12.658Zm-70.258-13.511c0-16.071 9.814-22.756 18.774-22.756c8.675 0 17.92 6.685 17.92 22.756h-36.694Zm-90.31-51.627c-13.939 0-22.899 6.542-27.876 11.094l-1.85-8.818h-31.288v165.83l35.555-7.537l.143-40.249c5.12 3.698 12.657 8.96 25.173 8.96c25.458 0 48.64-20.48 48.64-65.564c-.142-41.245-23.609-63.716-48.498-63.716Zm-8.534 97.991c-8.391 0-13.37-2.986-16.782-6.684l-.143-52.765c3.698-4.124 8.818-6.968 16.925-6.968c12.942 0 21.902 14.506 21.902 33.137c0 19.058-8.818 33.28-21.902 33.28ZM241.493 36.551l35.698-7.68V0l-35.698 7.538V36.55Zm0 10.809h35.698v124.444h-35.698V47.36Zm-38.257 10.524L200.96 47.36h-30.72v124.444h35.556V87.467c8.39-10.951 22.613-8.96 27.022-7.396V47.36c-4.551-1.707-21.191-4.836-29.582 10.524Zm-71.112-41.386l-34.702 7.395l-.142 113.92c0 21.05 15.787 36.551 36.836 36.551c11.662 0 20.195-2.133 24.888-4.693V140.8c-4.55 1.849-27.022 8.391-27.022-12.658V77.653h27.022V47.36h-27.022l.142-30.862ZM35.982 83.484c0-5.546 4.551-7.68 12.09-7.68c10.808 0 24.461 3.272 35.27 9.103V51.484c-11.804-4.693-23.466-6.542-35.27-6.542C19.2 44.942 0 60.018 0 85.192c0 39.252 54.044 32.995 54.044 49.92c0 6.541-5.688 8.675-13.653 8.675c-11.804 0-26.88-4.836-38.827-11.378v33.849c13.227 5.689 26.596 8.106 38.827 8.106c29.582 0 49.92-14.648 49.92-40.106c-.142-42.382-54.329-34.845-54.329-50.774Z" style="--darkreader-inline-fill: #070095;" data-darkreader-inline-fill=""></path>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Get paid from your users for your offered products and services.</p>
                     </div>
                 </div>
 
@@ -379,14 +371,12 @@
                         <div class="flex items-center">
                             <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/twitter-logo.png" alt="" />
                             <div class="ml-5 mr-auto">
-                                <p class="text-xl font-semibold text-black">Twitter</p>
-                                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+                                <p class="text-xl font-semibold text-black">OpenAI</p>
+                                <p class="mt-px text-sm text-gray-600">Chat Completions</p>
                             </div>
-                            <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <path d="M239.184 106.203a64.716 64.716 0 0 0-5.576-53.103C219.452 28.459 191 15.784 163.213 21.74A65.586 65.586 0 0 0 52.096 45.22a64.716 64.716 0 0 0-43.23 31.36c-14.31 24.602-11.061 55.634 8.033 76.74a64.665 64.665 0 0 0 5.525 53.102c14.174 24.65 42.644 37.324 70.446 31.36a64.72 64.72 0 0 0 48.754 21.744c28.481.025 53.714-18.361 62.414-45.481a64.767 64.767 0 0 0 43.229-31.36c14.137-24.558 10.875-55.423-8.083-76.483Zm-97.56 136.338a48.397 48.397 0 0 1-31.105-11.255l1.535-.87l51.67-29.825a8.595 8.595 0 0 0 4.247-7.367v-72.85l21.845 12.636c.218.111.37.32.409.563v60.367c-.056 26.818-21.783 48.545-48.601 48.601Zm-104.466-44.61a48.345 48.345 0 0 1-5.781-32.589l1.534.921l51.722 29.826a8.339 8.339 0 0 0 8.441 0l63.181-36.425v25.221a.87.87 0 0 1-.358.665l-52.335 30.184c-23.257 13.398-52.97 5.431-66.404-17.803ZM23.549 85.38a48.499 48.499 0 0 1 25.58-21.333v61.39a8.288 8.288 0 0 0 4.195 7.316l62.874 36.272l-21.845 12.636a.819.819 0 0 1-.767 0L41.353 151.53c-23.211-13.454-31.171-43.144-17.804-66.405v.256Zm179.466 41.695l-63.08-36.63L161.73 77.86a.819.819 0 0 1 .768 0l52.233 30.184a48.6 48.6 0 0 1-7.316 87.635v-61.391a8.544 8.544 0 0 0-4.4-7.213Zm21.742-32.69l-1.535-.922l-51.619-30.081a8.39 8.39 0 0 0-8.492 0L99.98 99.808V74.587a.716.716 0 0 1 .307-.665l52.233-30.133a48.652 48.652 0 0 1 72.236 50.391v.205ZM88.061 139.097l-21.845-12.585a.87.87 0 0 1-.41-.614V65.685a48.652 48.652 0 0 1 79.757-37.346l-1.535.87l-51.67 29.825a8.595 8.595 0 0 0-4.246 7.367l-.051 72.697Zm11.868-25.58L128.067 97.3l28.188 16.218v32.434l-28.086 16.218l-28.188-16.218l-.052-32.434Z"></path>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Build AI apps in any kind by an already integrated OpenAI API.</p>
                     </div>
                 </div>
 
@@ -395,20 +385,18 @@
                         <div class="flex items-center">
                             <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/sketch-logo.png" alt="" />
                             <div class="ml-5 mr-auto">
-                                <p class="text-xl font-semibold text-black">Sketch</p>
-                                <p class="mt-px text-sm text-gray-600">Direct Integration</p>
+                                <p class="text-xl font-semibold text-black">TRCP</p>
+                                <p class="mt-px text-sm text-gray-600">Server/Client communication with Strong types </p>
                             </div>
-                            <svg class="hidden w-5 h-5 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                            </svg>
+                            <path fill="currentColor" d="M24 12c0 6.62-5.38 12-12 12S0 18.62 0 12S5.38 0 12 0s12 5.38 12 12ZM1.21 12A10.78 10.78 0 0 0 12 22.79A10.78 10.78 0 0 0 22.79 12A10.78 10.78 0 0 0 12 1.21A10.78 10.78 0 0 0 1.21 12Zm10.915-6.086l2.162 1.248a.25.25 0 0 1 .125.217v1.103l2.473 1.428a.25.25 0 0 1 .125.217v2.355l.955.551a.25.25 0 0 1 .125.217v2.496a.25.25 0 0 1-.125.217l-2.162 1.248a.25.25 0 0 1-.25 0l-.956-.552l-2.472 1.427a.25.25 0 0 1-.25 0l-2.472-1.427l-.956.552a.25.25 0 0 1-.25 0l-2.162-1.248a.25.25 0 0 1-.125-.217V13.25a.25.25 0 0 1 .125-.217l.955-.551v-2.355a.25.25 0 0 1 .125-.217l2.473-1.428V7.38a.25.25 0 0 1 .125-.217l2.162-1.248a.25.25 0 0 1 .25 0Zm1.268 10.049a.25.25 0 0 1-.125-.217V13.25a.25.25 0 0 1 .125-.217l2.16-1.248a.25.25 0 0 1 .25 0l.707.408v-1.922l-2.098-1.21v.814a.25.25 0 0 1-.125.217l-2.162 1.248a.25.25 0 0 1-.25 0l-2.162-1.248a.25.25 0 0 1-.125-.217V9.06L7.49 10.271v1.922l.707-.408a.25.25 0 0 1 .25 0l2.16 1.248a.25.25 0 0 1 .125.217v2.496a.25.25 0 0 1-.125.217l-.705.408L12 17.582l2.098-1.211ZM10.088 9.73l1.662.96V8.766l-1.662-.955Zm3.824 0V7.811l-1.662.955v1.924ZM12 6.418l-1.66.96l1.66.954l1.66-.954Zm-5.59 9.184l1.66.958v-1.921l-1.66-.956Zm3.822 0v-1.92l-1.662.957v1.923Zm-1.91-3.311l-1.662.96l1.661.955l1.66-.956Zm5.446 3.31l1.66.96v-1.922l-1.66-.956Zm3.822 0v-1.918l-1.662.956v1.922Zm-1.912-3.31l-1.66.96l1.66.955l1.66-.956Z" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""></path>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Most secured and performant backend inbuilt.</p>
                     </div>
                 </div>
             </div>
 
             <div class="mt-12 text-center">
-                <a href="#" title="" class="inline-flex p-3 font-medium text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"> Check all 1,593 applications </a>
+                <a href="#" title="" class="inline-flex underline p-3 font-medium text-secondary transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"> Check applications built with nujin </a>
             </div>
         </div>
     </section>
@@ -421,7 +409,7 @@
                 <p class="mt-4 text-2xl font-medium">Hire our developers to build a version fitting to your needs!</p>
 
                 <div class="flex flex-col items-center justify-center px-16 mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row lg:mt-12 sm:px-0">
-                    <NuxtLink href="#start" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-blue-600 border border-transparent rounded-md sm:w-auto hover:bg-blue-700 focus:bg-blue-700" role="button"> Try For Free </NuxtLink>
+                    <NuxtLink href="#start" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-info border border-transparent rounded-md sm:w-auto hover:bg-black focus:bg-black" role="button"> Try For Free </NuxtLink>
 
                     <NuxtLink href="#contact" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-black transition-all duration-200 bg-transparent border border-black rounded-md sm:w-auto hover:bg-black hover:text-white focus:bg-black focus:text-white" role="button">
                         <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -431,7 +419,7 @@
                     </NuxtLink>
                 </div>
 
-                <p class="mt-6 text-base text-black">Already have an account? <a href="#" title="" class="text-blue-600 transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline">Log in</a></p>
+                <p class="mt-6 text-base text-black">Already have an account? <a href="#" title="" class="text-info transition-all duration-200 hover:text-accent focus:text-accent hover:underline">Log in</a></p>
             </div>
         </div>
     </section>
