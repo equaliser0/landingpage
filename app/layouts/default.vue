@@ -469,7 +469,9 @@ onMounted(() => {
         <!-- Content -->
         <div class="bg-base-200 h-screen flex w-full flex flex-col justify-between shadow shadow-l">
           <div class="overflow-scroll flex flex-col justify-between h-full" :class="(route.path.startsWith('/admin/') ? 'p-4' : 'p-0')">
-            <slot/>
+            <transition name="fade" mode="out-in">
+              <slot/>
+            </transition>
             <Footer/>
           </div>
         </div>
@@ -479,13 +481,20 @@ onMounted(() => {
 </template>
 
 <style>
-<style>
-.slider div:first-child{
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+/* .slider div:first-child{
   transform: translateX(-100%);
   transition: transform .3s ease-in
 }
 .slider:hover div{
   transform: translateY(0)
-}
-
+} */
 </style>
