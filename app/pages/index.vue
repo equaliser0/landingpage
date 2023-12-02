@@ -98,7 +98,7 @@
             <div class="max-w-xl mx-auto text-center">
                 <p class="text-sm font-semibold tracking-widest text-blue-600 uppercase" data-aos="fade-down" data-aos-delay="100">130+ Handcoded Blocks</p>
 
-                <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="100">Celebration helps you build beautiful website</h2>
+                <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="100">Build sophisticated <br> web apps rapdily</h2>
             </div>
 
             <div class="grid items-center grid-cols-1 mt-12 gap-y-10 lg:grid-cols-5 sm:mt-20 gap-x-4">
@@ -109,7 +109,7 @@
                         </svg>
                         <div class="ml-5">
                             <h3 class="text-xl font-semibold text-black">Progressive Webapp</h3>
-                            <p class="mt-3 text-base text-gray-600">Light-weight and powerful. Install it directly from the browser</p>
+                            <p class="mt-3 text-base text-gray-600">Light-weight and powerful. Seamless app installation within seconds from the browser</p>
                         </div>
                     </div>
 
@@ -119,7 +119,7 @@
                         </svg>
                         <div class="ml-5">
                             <h3 class="text-xl font-semibold text-black">Easy to Customize</h3>
-                            <p class="mt-3 text-base text-gray-600">Add any Tailwind component you gind useful for your business</p>
+                            <p class="mt-3 text-base text-gray-600">Modular System enables extendablility to your needs.</p>
                         </div>
                     </div>
 
@@ -128,8 +128,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                         <div class="ml-5">
-                            <h3 class="text-xl font-semibold text-black">Made with TailwindCSS</h3>
-                            <p class="mt-3 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.</p>
+                            <h3 class="text-xl font-semibold text-black">Database</h3>
+                            <p class="mt-3 text-base text-gray-600">Manage your set of data at one place</p>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
 
             <div class="grid grid-cols-1 mt-12 lg:mt-24 gap-y-12 md:grid-cols-4 gap-x-6">
                 <div class="md:px-4 lg:px-10" data-aos="fade-left" data-aos-delay="100">
-                    <img class="-rotate-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/3/team.jpg" alt="" />
+                    <img class="-rotate-1" src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Data Management</h3>
                       <p class="mt-4 text-base text-gray-600">Build internal solutions for your teams.</p>
@@ -159,7 +159,7 @@
                 </div>
 
                 <div class="md:px-4 lg:px-10" data-aos="fade-left" data-aos-delay="100">
-                    <img class="rotate-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/3/work.jpg" alt="" />
+                    <img class="rotate-1" src="https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Content Management</h3>
                       <p class="mt-4 text-base text-gray-600">Maintain stunning websites and blogs for your community.</p>
@@ -167,7 +167,7 @@
                 </div>
 
                 <div class="md:px-4 lg:px-10" data-aos="fade-right" data-aos-delay="100">
-                    <img class="-rotate-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/3/success.jpg" alt="" />
+                    <img class="-rotate-1" src="https://images.pexels.com/photos/18417334/pexels-photo-18417334/free-photo-of-blue-baseball-cap-and-stickers-from-the-truepa-brothers-online-shop.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">E-Commerce</h3>
                       <p class="mt-4 text-base text-gray-600">Own your very independend online shop.</p>
@@ -175,7 +175,7 @@
                 </div>
 
                 <div class="md:px-4 lg:px-10" data-aos="fade-right" data-aos-delay="100">
-                    <img class="rotate-1" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/3/success.jpg" alt="" />
+                    <img class="rotate-1" src="https://images.pexels.com/photos/5849559/pexels-photo-5849559.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">SaaS</h3>
                       <p class="mt-4 text-base text-gray-600">Offer automated services with your very own system.</p>
@@ -183,122 +183,6 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- How it works -->
-    <section class="py-10 bg-white sm:py-16 lg:pt-24" id="guide">
-        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">How does it work?</h2>
-                <p class="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-delay="100">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
-            </div>
-
-            <div class="relative mt-12 lg:mt-20">
-                <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
-                    <img class="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg" alt="" />
-                </div>
-
-                <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12" data-aos="fade-up" data-aos-delay="100">
-                    <div data-aos="fade-left" data-aos-delay="100">
-                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 1 </span>
-                        </div>
-                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Create a free account</h3>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                    </div>
-
-                    <div data-aos="fade-left" data-aos-delay="500">
-                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 2 </span>
-                        </div>
-                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Build your website</h3>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                    </div>
-
-                    <div data-aos="fade-left" data-aos-delay="700">
-                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
-                            <span class="text-xl font-semibold text-gray-700"> 3 </span>
-                        </div>
-                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Release & Launch</h3>
-                        <p class="mt-4 text-base text-gray-600">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Get Started -->
-    <section class="py-10 bg-white sm:py-16 lg:py-24" id="start">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-            <div class="max-w-2xl mx-auto text-center">
-                <svg class="mx-auto w-14 h-14" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
-                </svg>
-                <h2 class="mt-10 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Get Started</h2>
-                <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-delay="100">Clone the core solution and start customizing! You can hire us as professionals.</p>
-            </div>
-
-            <div class="flex flex-col items-center justify-center mt-8 space-y-4 md:space-y-0 md:space-x-4 md:flex-row lg:mt-12">
-                <a href="#" title="" class="inline-flex items-center justify-center px-4 py-4 text-black transition-all duration-200 bg-gray-200 rounded-md hover:bg-gray-600 hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-left" data-aos-delay="100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2 -ml-1 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                    git clone https://github.com/enjineDev/nujins
-                </a>
-
-                <a href="#" title="" class="inline-flex items-center justify-center px-4 py-4 text-black transition-all duration-200 border-2 border-black rounded-md hover:bg-black hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-right" data-aos-delay="100">
-                    <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                    </svg>
-                    Contact Us
-                </a>
-            </div>
-
-            <p class="mt-6 text-base text-center text-gray-600" data-aos="fade-down" data-aos-delay="100">It takes only 2 minutes to setup on any device</p>
-        </div>
-    </section>
-
-    <!-- CTA Subscription -->
-    <section class="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32" data-aos="fade-up" data-aos-delay="100">
-      <div class="absolute inset-0">
-        <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left" src="https://images.pexels.com/photos/7873571/pexels-photo-7873571.jpeg?auto=compress" alt="" />
-      </div>
-
-      <div class="absolute inset-0 hidden bg-gradient-to-r md:block from-black to-transparent"></div>
-
-      <div class="absolute inset-0 block bg-black/60 md:hidden"></div>
-
-      <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div class="text-center md:w-2/3 lg:w-1/2 xl:w-1/3 md:text-left">
-          <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Stay up-to-date</h2>
-          <p class="mt-4 text-base text-gray-200" data-aos="fade-up" data-aos-delay="100">And receive the newest insights and opportunities like bonuses and more.</p>
-
-          <form action="#" method="POST" class="mt-8 lg:mt-12" data-aos="zoom-out" data-aos-delay="100">
-            <div class="flex flex-col items-center sm:flex-row sm:justify-center">
-              <div class="flex-1 w-full min-w-0 px-4 sm:px-0">
-                <div class="relative text-gray-400 focus-within:text-gray-600">
-                  <label for="email" class="sr-only"></label>
-                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                    </svg>
-                  </div>
-                  <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter email address"
-                  class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-                  required
-                  />
-                </div>
-              </div>
-
-              <button type="submit" class="inline-flex items-center justify-center flex-shrink-0 w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-accent border border-transparent rounded-md sm:mt-0 sm:rounded-l-none sm:w-auto hover:bg-info focus:bg-info">
-                Get instant access
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
     </section>
 
     <!-- Integration -->
@@ -401,7 +285,49 @@
         </div>
     </section>
 
-    <!-- CTA Get Started -->
+    <!-- Get Started -->
+    <section class="py-10 bg-white sm:py-16 lg:pt-24" id="guide">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Get Started</h2>
+                <p class="max-w-lg mx-auto mt-4 text-base leading-relaxed text-gray-600" data-aos="fade-up" data-aos-delay="100">Simply download the boilerplate, install the packages with nodejs and run the app.</p>
+            </div>
+
+            <div class="relative mt-12 lg:mt-20">
+                <div class="absolute inset-x-0 hidden xl:px-44 top-2 md:block md:px-20 lg:px-28">
+                    <img class="w-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/steps/2/curved-dotted-line.svg" alt="" />
+                </div>
+
+                <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12" data-aos="fade-up" data-aos-delay="100">
+                    <div data-aos="fade-left" data-aos-delay="100">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                            <span class="text-xl font-semibold text-gray-700"> 1 </span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Git</h3>
+                        <p class="mt-4 text-base text-gray-600">Git clone https://github.com/enjineDev/nujin</p>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-delay="500">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                            <span class="text-xl font-semibold text-gray-700"> 2 </span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Install packages</h3>
+                        <p class="mt-4 text-base text-gray-600">npm i or yarn</p>
+                    </div>
+
+                    <div data-aos="fade-left" data-aos-delay="700">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
+                            <span class="text-xl font-semibold text-gray-700"> 3 </span>
+                        </div>
+                        <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Start customizing</h3>
+                        <p class="mt-4 text-base text-gray-600">yarn dev</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Contact -->
     <section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="text-center">
@@ -424,6 +350,51 @@
         </div>
     </section>
 
+    <!-- CTA Subscription -->
+    <section class="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32" data-aos="fade-up" data-aos-delay="100">
+      <div class="absolute inset-0">
+        <img class="object-cover w-full h-full md:object-left md:scale-150 md:origin-top-left" src="https://images.pexels.com/photos/7873571/pexels-photo-7873571.jpeg?auto=compress" alt="" />
+      </div>
+
+      <div class="absolute inset-0 hidden bg-gradient-to-r md:block from-black to-transparent"></div>
+
+      <div class="absolute inset-0 block bg-black/60 md:hidden"></div>
+
+      <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="text-center md:w-2/3 lg:w-1/2 xl:w-1/3 md:text-left">
+          <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Stay up-to-date</h2>
+          <p class="mt-4 text-base text-gray-200" data-aos="fade-up" data-aos-delay="100">And receive the newest insights and opportunities like bonuses and more.</p>
+
+          <form action="#" method="POST" class="mt-8 lg:mt-12" data-aos="zoom-out" data-aos-delay="100">
+            <div class="flex flex-col items-center sm:flex-row sm:justify-center">
+              <div class="flex-1 w-full min-w-0 px-4 sm:px-0">
+                <div class="relative text-gray-400 focus-within:text-gray-600">
+                  <label for="email" class="sr-only"></label>
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                    <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                    </svg>
+                  </div>
+                  <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Enter email address"
+                  class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                  required
+                  />
+                </div>
+              </div>
+
+              <button type="submit" class="inline-flex items-center justify-center flex-shrink-0 w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-accent border border-transparent rounded-md sm:mt-0 sm:rounded-l-none sm:w-auto hover:bg-info focus:bg-info">
+                Get instant access
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- Meet the Founder -->
     <section class="anient py-10 text-white sm:py-16 lg:py-24 shadow-xl shadow-inner">
         <div class="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
@@ -435,7 +406,7 @@
 
                 <div class="mt-10 md:mt-0" data-aos="fade-right" data-aos-delay="100">
                     <blockquote>
-                        <p class="text-xl">“Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.”</p>
+                        <p class="text-xl">“Building webapps, AI and Crypto.”</p>
                     </blockquote>
                     <p class="text-lg font-semibold mt-7">Christopher Müller</p>
                     <p class="mt-1 text-base text-gray-600">Developer, Founder, Musician</p>
