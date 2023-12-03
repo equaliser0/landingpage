@@ -124,4 +124,4 @@ const getNotifcationType = (notificationType) => {
 </template>
 
 <style>
-<style>
+</style>
