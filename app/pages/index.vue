@@ -30,7 +30,7 @@
           <div class="lg:flex lg:items-center lg:justify-end lg:space-x-6 sm:ml-auto" data-aos="fade-up" data-aos-delay="100">
             <NuxtLink href="#contact" title="" class="hidden text-base text-white transition-all duration-200 lg:inline-flex hover:text-opacity-80"> Contact Us </NuxtLink>
 
-            <NuxtLink href="#start" title="" class="inline-flex items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg" role="button"> Get Started </NuxtLink>
+            <NuxtLink href="#guide" title="" class="inline-flex items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg" role="button"> Get Started </NuxtLink>
           </div>
 
           <button type="button" class="inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800" data-aos="fade-up" data-aos-delay="100">
