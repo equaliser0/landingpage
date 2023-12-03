@@ -7,8 +7,8 @@
       <div class="px-4 mx-auto sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
           <div class="flex-shrink-0">
-            <NuxtLink href="/" title="" class="flex">
-              <img class="w-32" src="/logo.png" alt="nujin" />
+            <NuxtLink href="/" title="" class="flex mr-8">
+              <img class="w-8" src="/logo.png" alt="nujin" />
               <!-- <span class="inline">nujin</span> -->
             </NuxtLink>
           </div>
@@ -52,8 +52,8 @@
     <section class="anient h-screen pt-24 overflow-hidden lg:pt-32 text-white">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-xl mx-auto text-center" data-aos="fade-down" data-aos-delay="100">
-          <h2 class="text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">Don't waste time by reinventing the wheel</h2>
-          <p class="mt-4 text-base leading-relaxed">The CMS like Data Management System ready-to-use out-of-the-box</p>
+          <h2 class="text-5xl font-bold leading-tight lg:text-6xl">nujin</h2>
+          <p class="mt-4 leading-relaxed md:text-xl">Build with ease.</p>
         </div>
 
         <div class="flex flex-col items-start justify-center max-w-lg px-10 mx-auto mt-8 space-y-8 lg:max-w-xl sm:px-0 sm:space-y-0 sm:flex-row sm:mt-16 sm:space-x-6 lg:space-x-12 sm:items-center">
@@ -98,7 +98,7 @@
             <div class="max-w-xl mx-auto text-center">
                 <p class="text-sm font-semibold tracking-widest text-blue-600 uppercase" data-aos="fade-down" data-aos-delay="100">130+ Handcoded Blocks</p>
 
-                <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="100">Build sophisticated <br> web apps rapdily</h2>
+                <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="100">Build sophisticated <br> web apps rapidly</h2>
             </div>
 
             <div class="grid items-center grid-cols-1 mt-12 gap-y-10 lg:grid-cols-5 sm:mt-20 gap-x-4">
@@ -109,7 +109,7 @@
                         </svg>
                         <div class="ml-5">
                             <h3 class="text-xl font-semibold text-black">Progressive Webapp</h3>
-                            <p class="mt-3 text-base text-gray-600">Light-weight and powerful. Seamless app installation within seconds from the browser</p>
+                            <p class="mt-3 text-base text-gray-600">Light-weight, powerful and cross-platform. Seamless app installation within seconds from the browser</p>
                         </div>
                     </div>
 
@@ -129,7 +129,7 @@
                         </svg>
                         <div class="ml-5">
                             <h3 class="text-xl font-semibold text-black">Database</h3>
-                            <p class="mt-3 text-base text-gray-600">Manage your set of data at one place</p>
+                            <p class="mt-3 text-base text-gray-600">CMS like Data Management System to build platforms you want.</p>
                         </div>
                     </div>
                 </div>
@@ -197,12 +197,12 @@
                 <div class="overflow-hidden bg-white rounded shadow" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-8">
                         <div class="flex items-center">
-                            <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/gmail-logo.png" alt="" />
+                            <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/N/nuxt-logo-64E0472AA8-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
+                              <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"></rect><path fill="#00DC82" d="M138.787 189.333h68.772c2.184.001 4.33-.569 6.222-1.652a12.374 12.374 0 0 0 4.554-4.515a12.236 12.236 0 0 0-.006-12.332l-46.185-79.286a12.388 12.388 0 0 0-4.553-4.514a12.53 12.53 0 0 0-12.442 0a12.388 12.388 0 0 0-4.553 4.514l-11.809 20.287l-23.09-39.67a12.386 12.386 0 0 0-4.555-4.513a12.536 12.536 0 0 0-12.444 0a12.391 12.391 0 0 0-4.555 4.513L36.67 170.834a12.245 12.245 0 0 0-1.67 6.165c0 2.165.573 4.292 1.665 6.167a12.374 12.374 0 0 0 4.554 4.515a12.513 12.513 0 0 0 6.222 1.652h43.17c17.104 0 29.718-7.446 38.397-21.973l21.072-36.169l11.287-19.356l33.873 58.142h-45.16l-11.293 19.356Zm-48.88-19.376l-30.127-.007l45.16-77.518l22.533 38.759l-15.087 25.906c-5.764 9.426-12.312 12.86-22.48 12.86Z" style="--darkreader-inline-fill: #00b068;" data-darkreader-inline-fill=""></path></g>
                                 <p class="text-xl font-semibold text-black">Nuxt 3</p>
                                 <p class="mt-px text-sm text-gray-600">Fullstack Framework</p>
                             </div>
-                            <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"></rect><path fill="#00DC82" d="M138.787 189.333h68.772c2.184.001 4.33-.569 6.222-1.652a12.374 12.374 0 0 0 4.554-4.515a12.236 12.236 0 0 0-.006-12.332l-46.185-79.286a12.388 12.388 0 0 0-4.553-4.514a12.53 12.53 0 0 0-12.442 0a12.388 12.388 0 0 0-4.553 4.514l-11.809 20.287l-23.09-39.67a12.386 12.386 0 0 0-4.555-4.513a12.536 12.536 0 0 0-12.444 0a12.391 12.391 0 0 0-4.555 4.513L36.67 170.834a12.245 12.245 0 0 0-1.67 6.165c0 2.165.573 4.292 1.665 6.167a12.374 12.374 0 0 0 4.554 4.515a12.513 12.513 0 0 0 6.222 1.652h43.17c17.104 0 29.718-7.446 38.397-21.973l21.072-36.169l11.287-19.356l33.873 58.142h-45.16l-11.293 19.356Zm-48.88-19.376l-30.127-.007l45.16-77.518l22.533 38.759l-15.087 25.906c-5.764 9.426-12.312 12.86-22.48 12.86Z" style="--darkreader-inline-fill: #00b068;" data-darkreader-inline-fill=""></path></g>
                         </div>
                         <p class="text-base leading-relaxed text-gray-600 mt-7">Sophisticated backbone of your app for maximum performance and flexibility.</p>
                     </div>
@@ -211,7 +211,7 @@
                 <div class="overflow-hidden bg-white rounded shadow" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-8">
                         <div class="flex items-center">
-                            <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/slack-logo.png" alt="" />
+                            <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
                                 <p class="text-xl font-semibold text-black">Supabase</p>
                                 <p class="mt-px text-sm text-gray-600">Database instance</p>
@@ -225,7 +225,7 @@
                 <div class="overflow-hidden bg-white rounded shadow" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-8">
                         <div class="flex items-center">
-                            <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/shopify-logo.png" alt="" />
+                            <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
                                 <p class="text-xl font-semibold text-black">TailwindCSS</p>
                                 <p class="mt-px text-sm text-gray-600">A utility-first CSS framework</p>
@@ -239,7 +239,7 @@
                 <div class="overflow-hidden bg-white rounded shadow" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-8">
                         <div class="flex items-center">
-                            <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/intercom-logo.png" alt="" />
+                            <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/S/stripe-logo-C409DC9652-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
                                 <p class="text-xl font-semibold text-black">Stripe</p>
                                 <p class="mt-px text-sm text-gray-600">Payments integration</p>
@@ -253,7 +253,7 @@
                 <div class="overflow-hidden bg-white rounded shadow" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-8">
                         <div class="flex items-center">
-                            <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/twitter-logo.png" alt="" />
+                            <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/C/chatgpt-logo-6E960AECFF-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
                                 <p class="text-xl font-semibold text-black">OpenAI</p>
                                 <p class="mt-px text-sm text-gray-600">Chat Completions</p>
@@ -267,7 +267,7 @@
                 <div class="overflow-hidden bg-white rounded shadow" data-aos="zoom-in" data-aos-delay="100">
                     <div class="p-8">
                         <div class="flex items-center">
-                            <img class="flex-shrink-0 w-12 h-auto" src="https://cdn.rareblocks.xyz/collection/celebration/images/integration/3/sketch-logo.png" alt="" />
+                            <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/T/typeorm-logo-F243B34DEE-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
                                 <p class="text-xl font-semibold text-black">TRCP</p>
                                 <p class="mt-px text-sm text-gray-600">Server/Client communication with Strong types </p>
@@ -279,9 +279,9 @@
                 </div>
             </div>
 
-            <div class="mt-12 text-center">
+            <!-- <div class="mt-12 text-center">
                 <a href="#" title="" class="inline-flex underline p-3 font-medium text-secondary transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"> Check applications built with nujin </a>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -331,13 +331,16 @@
     <section class="py-10 bg-gray-100 sm:py-16 lg:py-24">
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="text-center">
-                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl">Get a hyper customized version</h2>
-                <p class="mt-4 text-2xl font-medium">Hire our developers to build a version fitting to your needs!</p>
+                <svg class="mx-auto w-14 h-14 mb-4 -mt-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" data-aos="fade-up" data-aos-delay="100">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
+                </svg>
+                <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="100">Get a hyper customized version</h2>
+                <p class="mt-4 text-2xl font-medium" data-aos="fade-down" data-aos-delay="100">Hire our developers to build a version fitting to your needs!</p>
 
                 <div class="flex flex-col items-center justify-center px-16 mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row lg:mt-12 sm:px-0">
-                    <NuxtLink href="#start" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-info border border-transparent rounded-md sm:w-auto hover:bg-black focus:bg-black" role="button"> Try For Free </NuxtLink>
+                    <NuxtLink href="#start" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-info border border-transparent rounded-md sm:w-auto hover:bg-black focus:bg-black" role="button" data-aos="fade-up" data-aos-delay="100"> Try For Free </NuxtLink>
 
-                    <NuxtLink href="#contact" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-black transition-all duration-200 bg-transparent border border-black rounded-md sm:w-auto hover:bg-black hover:text-white focus:bg-black focus:text-white" role="button">
+                    <NuxtLink href="#contact" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-black transition-all duration-200 bg-transparent border border-black rounded-md sm:w-auto hover:bg-black hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-up" data-aos-delay="100">
                         <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                         </svg>
@@ -345,7 +348,7 @@
                     </NuxtLink>
                 </div>
 
-                <p class="mt-6 text-base text-black">Already have an account? <a href="#" title="" class="text-info transition-all duration-200 hover:text-accent focus:text-accent hover:underline">Log in</a></p>
+                <!-- <p class="mt-6 text-base text-black">Already have an account? <a href="#" title="" class="text-info transition-all duration-200 hover:text-accent focus:text-accent hover:underline">Log in</a></p> -->
             </div>
         </div>
     </section>
@@ -431,9 +434,9 @@
                             <th class="py-8 pr-4"></th>
 
                             <th class="px-4 py-8 text-center">
-                                <span class="text-base font-medium text-accent"> Core Code </span>
-                                <p class="mt-6 text-6xl font-bold">0€</p>
-                                <p class="mt-2 text-base font-normal text-gray-500">Per month</p>
+                                <span class="text-base font-medium text-accent"> Core </span>
+                                <p class="mt-6 text-6xl font-bold">FREE</p>
+                                <p class="mt-2 text-base font-normal text-gray-500">for ever</p>
                             </th>
 
                             <th class="px-4 py-8 text-center">
@@ -449,7 +452,7 @@
                             </th>
 
                             <th class="px-4 py-8 text-center">
-                                <span class="text-base font-medium text-accent"> Feature </span>
+                                <span class="text-base font-medium text-accent"> Enterprise </span>
                                 <p class="mt-6 text-6xl font-bold">500€</p>
                                 <p class="mt-2 text-base font-normal text-gray-500">Per month</p>
                             </th>
