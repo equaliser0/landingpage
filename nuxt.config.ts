@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  title: 'The Crowned Lion',
+  title: 'nujin',
   srcDir: './app',
   ssr: false,
   modules: [

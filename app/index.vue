@@ -3,7 +3,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 useHead({
-  title: 'The Crowned Lion'
+  title: 'nujin'
 })
 
 onCreated(() => {
