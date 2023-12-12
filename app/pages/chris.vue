@@ -167,7 +167,7 @@ definePageMeta({
         <!-- Blog Post List -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="card card-compact bg-base-100 shadow-xl">
-            <figure><img src="/images/blog-post-1.jpg" alt="Blog Post 1" /></figure>
+            <!-- <figure><img src="/images/blog-post-1.jpg" alt="Blog Post 1" /></figure> -->
             <div class="card-body">
               <h2 class="card-title">Blog Post 1</h2>
               <p>Summary of Blog Post 1.</p>
@@ -186,7 +186,7 @@ definePageMeta({
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Playlist 1 -->
           <div class="card card-compact bg-base-100 shadow-xl">
-            <figure><img src="/images/playlist-1.jpg" alt="Playlist 1" /></figure>
+            <!-- <figure><img src="/images/playlist-1.jpg" alt="Playlist 1" /></figure> -->
             <div class="card-body">
               <h2 class="card-title">Playlist 1</h2>
               <p>Description of Playlist 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -197,7 +197,7 @@ definePageMeta({
           </div>
           <!-- Playlist 2 -->
           <div class="card card-compact bg-base-100 shadow-xl">
-            <figure><img src="/images/playlist-2.jpg" alt="Playlist 2" /></figure>
+            <!-- <figure><img src="/images/playlist-2.jpg" alt="Playlist 2" /></figure> -->
             <div class="card-body">
               <h2 class="card-title">Playlist 2</h2>
               <p>Description of Playlist 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -208,7 +208,7 @@ definePageMeta({
           </div>
           <!-- Playlist 3 -->
           <div class="card card-compact bg-base-100 shadow-xl">
-            <figure><img src="/images/playlist-3.jpg" alt="Playlist 3" /></figure>
+            <!-- <figure><img src="/images/playlist-3.jpg" alt="Playlist 3" /></figure> -->
             <div class="card-body">
               <h2 class="card-title">Playlist 3</h2>
               <p>Description of Playlist 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
@@ -220,7 +220,7 @@ definePageMeta({
 
           <!-- Playlist 1 -->
           <div class="card card-compact bg-base-100 shadow-xl">
-            <figure><img src="/images/playlist-1.jpg" alt="Playlist 1" /></figure>
+            <!-- <figure><img src="/images/playlist-1.jpg" alt="Playlist 1" /></figure> -->
             <div class="card-body">
               <h2 class="card-title">Playlist 1</h2>
               <p>Description of Playlist 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -231,7 +231,7 @@ definePageMeta({
           </div>
           <!-- Playlist 2 -->
           <div class="card card-compact bg-base-100 shadow-xl">
-            <figure><img src="/images/playlist-2.jpg" alt="Playlist 2" /></figure>
+            <!-- <figure><img src="/images/playlist-2.jpg" alt="Playlist 2" /></figure> -->
             <div class="card-body">
               <h2 class="card-title">Playlist 2</h2>
               <p>Description of Playlist 2. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -242,7 +242,7 @@ definePageMeta({
           </div>
           <!-- Playlist 3 -->
           <div class="card card-compact bg-base-100 shadow-xl">
-            <figure><img src="/images/playlist-3.jpg" alt="Playlist 3" /></figure>
+            <!-- <figure><img src="/images/playlist-3.jpg" alt="Playlist 3" /></figure> -->
             <div class="card-body">
               <h2 class="card-title">Playlist 3</h2>
               <p>Description of Playlist 3. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>

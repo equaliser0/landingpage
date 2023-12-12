@@ -1,3 +1,47 @@
+<script setup lang="ts">
+const notificationStore = useNotificationStore()
+
+const contactData = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const submitData = async (data) => {
+  try {
+    await submitContact(data)
+    notificationStore.addNotification({
+      type: 'success',
+      msg: 'Thanks! We will reply usally within the next 24h'
+    })
+  } catch (error) {
+    notificationStore.addNotification({
+      type: 'error',
+      msg: error
+    })
+  }
+}
+
+const submitSubscription = async (email) => {
+  try {
+    await subscribe(email)
+    notificationStore.addNotification({
+      type: 'success',
+      msg: 'Thanks for subscribing'
+    })
+  } catch (error) {
+    notificationStore.addNotification({
+      type: 'error',
+      msg: error
+    })
+  }
+}
+
+definePageMeta({
+  layout: 'none'
+})
+</script>
+
 <template>
   <div class="">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Blinker">
@@ -8,8 +52,8 @@
         <div class="flex items-center justify-between h-16 lg:h-20">
           <div class="flex-shrink-0">
             <NuxtLink href="/" title="" class="flex mr-8">
-              <img class="w-8" src="/logo.png" alt="nujin" />
-              <!-- <span class="inline">nujin</span> -->
+              <img class="w-8" src="/logo.png" alt="enjine" />
+              <!-- <span class="inline">enjine</span> -->
             </NuxtLink>
           </div>
 
@@ -52,7 +96,7 @@
     <section class="anient h-screen pt-24 overflow-hidden lg:pt-32 text-white">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-xl mx-auto text-center" data-aos="fade-down" data-aos-delay="100">
-          <h2 class="text-5xl font-bold leading-tight lg:text-6xl">nujin</h2>
+          <h2 class="text-5xl font-bold leading-tight lg:text-6xl">enjine</h2>
           <p class="mt-4 leading-relaxed md:text-xl">Build with ease.</p>
         </div>
 
@@ -74,7 +118,7 @@
         <div class="flex flex-col items-center justify-center mt-8 space-y-4 md:space-y-0 md:space-x-4 md:flex-row lg:mt-12">
             <a href="#" title="" class="text-sm inline-flex items-center justify-center px-4 py-4 text-black transition-all duration-200 bg-white/30 rounded-md hover:bg-black/30 hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-left" data-aos-delay="100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2 -ml-1 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                git clone https://github.com/enjineDev/nujins
+                git clone https://github.com/enjineDev/enjines
             </a>
 
             <a href="#features" title="" class="inline-flex items-center justify-center px-4 py-4 text-black bg-white transition-all duration-200 rounded-md hover:bg-black hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-right" data-aos-delay="100">
@@ -96,7 +140,7 @@
     <section class="py-10 bg-gray-50 sm:py-16 lg:py-24" id="features">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
-                <p class="text-sm font-semibold tracking-widest text-blue-600 uppercase" data-aos="fade-down" data-aos-delay="100">130+ Handcoded Blocks</p>
+                <p class="text-sm font-semibold tracking-widest text-blue-600 uppercase" data-aos="fade-down" data-aos-delay="100">130+ available components</p>
 
                 <h2 class="mt-6 text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="100">Build sophisticated <br> web apps rapidly</h2>
             </div>
@@ -108,8 +152,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                         </svg>
                         <div class="ml-5">
-                            <h3 class="text-xl font-semibold text-black">Progressive Webapp</h3>
-                            <p class="mt-3 text-base text-gray-600">Light-weight, powerful and cross-platform. Seamless app installation within seconds from the browser</p>
+                            <h3 class="text-xl font-semibold text-black">Progressive Web App</h3>
+                            <p class="mt-3 text-base text-gray-600">Experience a light-weight, powerful, and cross-platform solution. Effortlessly install our app within seconds directly from your browser, ensuring a seamless user experience.</p>
                         </div>
                     </div>
 
@@ -118,8 +162,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <div class="ml-5">
-                            <h3 class="text-xl font-semibold text-black">Easy to Customize</h3>
-                            <p class="mt-3 text-base text-gray-600">Modular System enables extendablility to your needs.</p>
+                            <h3 class="text-xl font-semibold text-black">Easy Customization</h3>
+                            <p class="mt-3 text-base text-gray-600">Our modular system provides unparalleled flexibility, allowing you to easily customize and extend functionality according to your specific needs.</p>
                         </div>
                     </div>
 
@@ -128,8 +172,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
                         <div class="ml-5">
-                            <h3 class="text-xl font-semibold text-black">Database</h3>
-                            <p class="mt-3 text-base text-gray-600">CMS like Data Management System to build platforms you want.</p>
+                            <h3 class="text-xl font-semibold text-black">Seamless Database Integration</h3>
+                            <p class="mt-3 text-base text-gray-600">Utilize our CMS-like Data Management System to construct the platforms you envision, seamlessly integrating databases for efficient and scalable solutions.</p>
                         </div>
                     </div>
                 </div>
@@ -145,8 +189,8 @@
     <section class="py-10 bg-gray-50 text-gray-600 sm:py-16 lg:py-24" id="solutions">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="max-w-2xl mx-auto text-center">
-                <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl" data-aos="fade-down" data-aos-delay="100">Ready to use System</h2>
-                <p data-aos="fade-up" data-aos-delay="100">Just focus on your business</p>
+                <h2 class="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl" data-aos="fade-down" data-aos-delay="100">Ready-to-Use System</h2>
+                <p data-aos="fade-up" data-aos-delay="100">Simplify your operations and stay focused on your business. Our ready-to-use system streamlines processes, so you can maximize productivity without the hassle.</p>
             </div>
 
             <div class="grid grid-cols-1 mt-12 lg:mt-24 gap-y-12 md:grid-cols-4 gap-x-6">
@@ -154,7 +198,7 @@
                     <img class="-rotate-1" src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Data Management</h3>
-                      <p class="mt-4 text-base text-gray-600">Build internal solutions for your teams.</p>
+                      <p class="mt-4 text-base text-gray-600">Empower your teams with tailored internal solutions. Our data management tools facilitate efficient collaboration within your organization.</p>
                     </div>
                 </div>
 
@@ -162,7 +206,7 @@
                     <img class="rotate-1" src="https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Content Management</h3>
-                      <p class="mt-4 text-base text-gray-600">Maintain stunning websites and blogs for your community.</p>
+                      <p class="mt-4 text-base text-gray-600">Craft and maintain captivating websites and blogs effortlessly. Our content management system enables you to showcase your brand and engage with your community seamlessly.</p>
                     </div>
                 </div>
 
@@ -170,7 +214,7 @@
                     <img class="-rotate-1" src="https://images.pexels.com/photos/18417334/pexels-photo-18417334/free-photo-of-blue-baseball-cap-and-stickers-from-the-truepa-brothers-online-shop.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">E-Commerce</h3>
-                      <p class="mt-4 text-base text-gray-600">Own your very independend online shop.</p>
+                      <p class="mt-4 text-base text-gray-600">Take control with your own independent online shop. Our e-commerce solutions provide the platform for you to manage and grow your digital storefront with ease.</p>
                     </div>
                 </div>
 
@@ -178,7 +222,7 @@
                     <img class="rotate-1" src="https://images.pexels.com/photos/5849559/pexels-photo-5849559.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">SaaS</h3>
-                      <p class="mt-4 text-base text-gray-600">Offer automated services with your very own system.</p>
+                      <p class="mt-4 text-base text-gray-600">Deliver automated services with your personalized system. Our SaaS solutions empower you to provide efficient and cutting-edge services to your audience.</p>
                     </div>
                 </div>
             </div>
@@ -204,7 +248,7 @@
                                 <p class="mt-px text-sm text-gray-600">Fullstack Framework</p>
                             </div>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Sophisticated backbone of your app for maximum performance and flexibility.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Unleash the power of Nuxt 3, your go-to fullstack framework, providing a sophisticated backbone for your application. Experience maximum performance and unparalleled flexibility to bring your ideas to life seamlessly.</p>
                     </div>
                 </div>
 
@@ -218,7 +262,7 @@
                             </div>
                             <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"></rect><g clip-path="url(#iconifyVue2)"><path fill="url(#iconifyVue0)" d="M144.757 223.193c-5.061 6.373-15.323 2.881-15.445-5.257l-1.783-119.029h80.035c14.496 0 22.581 16.744 13.567 28.097l-76.374 96.189Z"></path><path fill="url(#iconifyVue1)" fill-opacity=".2" d="M144.757 223.193c-5.061 6.373-15.323 2.881-15.445-5.257l-1.783-119.029h80.035c14.496 0 22.581 16.744 13.567 28.097l-76.374 96.189Z"></path><path fill="#3ECF8E" d="M112.207 31.666c5.061-6.375 15.323-2.882 15.445 5.256l.782 119.029H49.4c-14.497 0-22.582-16.744-13.567-28.097l76.374-96.188Z" style="--darkreader-inline-fill: #4fd398;" data-darkreader-inline-fill=""></path></g><defs><linearGradient id="iconifyVue0" x1="127.529" x2="198.661" y1="125.299" y2="155.132" gradientUnits="userSpaceOnUse"><stop stop-color="#249361" style="--darkreader-inline-stopcolor: #1d764e;" data-darkreader-inline-stopcolor=""></stop><stop offset="1" stop-color="#3ECF8E" style="--darkreader-inline-stopcolor: #279d75;" data-darkreader-inline-stopcolor=""></stop></linearGradient><linearGradient id="iconifyVue1" x1="95.993" x2="128.433" y1="82.12" y2="143.187" gradientUnits="userSpaceOnUse"><stop></stop><stop offset="1" stop-opacity="0"></stop></linearGradient><clipPath id="iconifyVue2"><path fill="#fff" d="M32 28h192.92v200H32z" style="--darkreader-inline-fill: #e8e6e3;" data-darkreader-inline-fill=""></path></clipPath></defs></g>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Opensource, secure and a standard database system for all of your data and your files including authentication and role management. </p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Discover Supabase, your open-source, secure, and standardized database system. Manage all your data and files effortlessly, complete with authentication and role management features for enhanced security and control.</p>
                     </div>
                 </div>
 
@@ -228,11 +272,11 @@
                             <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/T/tailwind-css-logo-5AD4175897-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
                                 <p class="text-xl font-semibold text-black">TailwindCSS</p>
-                                <p class="mt-px text-sm text-gray-600">A utility-first CSS framework</p>
+                                <p class="mt-px text-sm text-gray-600">A utility-first UI CSS framework</p>
                             </div>
                             <g fill="none"><rect width="256" height="256" fill="#242938" rx="60"></rect><path fill="url(#iconifyVue3)" fill-rule="evenodd" d="M83 110c6-24 21.001-36 45-36c36 0 40.5 27 58.5 31.5c12.001 3.001 22.5-1.499 31.5-13.5c-5.999 23.999-21.001 36-45 36c-36 0-40.5-27-58.5-31.5C102.499 93.5 92 98 83 110Zm-45 54c6-23.999 21-36 45-36c36 0 40.5 27 58.5 31.5c12.001 3.001 22.5-1.499 31.5-13.5c-5.999 23.999-21.001 36-45 36c-36 0-40.5-27-58.5-31.5c-12-3.001-22.5 1.499-31.5 13.5Z" clip-rule="evenodd"></path><defs><linearGradient id="iconifyVue3" x1="86.5" x2="163.5" y1="74" y2="185.5" gradientUnits="userSpaceOnUse"><stop stop-color="#32B1C1" style="--darkreader-inline-stopcolor: #288e9a;" data-darkreader-inline-stopcolor=""></stop><stop offset="1" stop-color="#14C6B7" style="--darkreader-inline-stopcolor: #109e92;" data-darkreader-inline-stopcolor=""></stop></linearGradient></defs></g>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Seamless adaptable UI design and a slim ans sexy look.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Adapts the UI seamlessly to your needs. Experience a sleek and stylish design, ensuring a slim and visually appealing aesthetic for your projects.</p>
                     </div>
                 </div>
 
@@ -246,7 +290,7 @@
                             </div>
                             <path fill="#635BFF" d="M512 110.08c0-36.409-17.636-65.138-51.342-65.138c-33.85 0-54.33 28.73-54.33 64.854c0 42.808 24.179 64.426 58.88 64.426c16.925 0 29.725-3.84 39.396-9.244v-28.445c-9.67 4.836-20.764 7.823-34.844 7.823c-13.796 0-26.027-4.836-27.591-21.618h69.547c0-1.85.284-9.245.284-12.658Zm-70.258-13.511c0-16.071 9.814-22.756 18.774-22.756c8.675 0 17.92 6.685 17.92 22.756h-36.694Zm-90.31-51.627c-13.939 0-22.899 6.542-27.876 11.094l-1.85-8.818h-31.288v165.83l35.555-7.537l.143-40.249c5.12 3.698 12.657 8.96 25.173 8.96c25.458 0 48.64-20.48 48.64-65.564c-.142-41.245-23.609-63.716-48.498-63.716Zm-8.534 97.991c-8.391 0-13.37-2.986-16.782-6.684l-.143-52.765c3.698-4.124 8.818-6.968 16.925-6.968c12.942 0 21.902 14.506 21.902 33.137c0 19.058-8.818 33.28-21.902 33.28ZM241.493 36.551l35.698-7.68V0l-35.698 7.538V36.55Zm0 10.809h35.698v124.444h-35.698V47.36Zm-38.257 10.524L200.96 47.36h-30.72v124.444h35.556V87.467c8.39-10.951 22.613-8.96 27.022-7.396V47.36c-4.551-1.707-21.191-4.836-29.582 10.524Zm-71.112-41.386l-34.702 7.395l-.142 113.92c0 21.05 15.787 36.551 36.836 36.551c11.662 0 20.195-2.133 24.888-4.693V140.8c-4.55 1.849-27.022 8.391-27.022-12.658V77.653h27.022V47.36h-27.022l.142-30.862ZM35.982 83.484c0-5.546 4.551-7.68 12.09-7.68c10.808 0 24.461 3.272 35.27 9.103V51.484c-11.804-4.693-23.466-6.542-35.27-6.542C19.2 44.942 0 60.018 0 85.192c0 39.252 54.044 32.995 54.044 49.92c0 6.541-5.688 8.675-13.653 8.675c-11.804 0-26.88-4.836-38.827-11.378v33.849c13.227 5.689 26.596 8.106 38.827 8.106c29.582 0 49.92-14.648 49.92-40.106c-.142-42.382-54.329-34.845-54.329-50.774Z" style="--darkreader-inline-fill: #070095;" data-darkreader-inline-fill=""></path>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Get paid from your users for your offered products and services.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Maximize revenue effortlessly by accepting payments from your users for the products and services you offer.</p>
                     </div>
                 </div>
 
@@ -260,7 +304,7 @@
                             </div>
                             <path d="M239.184 106.203a64.716 64.716 0 0 0-5.576-53.103C219.452 28.459 191 15.784 163.213 21.74A65.586 65.586 0 0 0 52.096 45.22a64.716 64.716 0 0 0-43.23 31.36c-14.31 24.602-11.061 55.634 8.033 76.74a64.665 64.665 0 0 0 5.525 53.102c14.174 24.65 42.644 37.324 70.446 31.36a64.72 64.72 0 0 0 48.754 21.744c28.481.025 53.714-18.361 62.414-45.481a64.767 64.767 0 0 0 43.229-31.36c14.137-24.558 10.875-55.423-8.083-76.483Zm-97.56 136.338a48.397 48.397 0 0 1-31.105-11.255l1.535-.87l51.67-29.825a8.595 8.595 0 0 0 4.247-7.367v-72.85l21.845 12.636c.218.111.37.32.409.563v60.367c-.056 26.818-21.783 48.545-48.601 48.601Zm-104.466-44.61a48.345 48.345 0 0 1-5.781-32.589l1.534.921l51.722 29.826a8.339 8.339 0 0 0 8.441 0l63.181-36.425v25.221a.87.87 0 0 1-.358.665l-52.335 30.184c-23.257 13.398-52.97 5.431-66.404-17.803ZM23.549 85.38a48.499 48.499 0 0 1 25.58-21.333v61.39a8.288 8.288 0 0 0 4.195 7.316l62.874 36.272l-21.845 12.636a.819.819 0 0 1-.767 0L41.353 151.53c-23.211-13.454-31.171-43.144-17.804-66.405v.256Zm179.466 41.695l-63.08-36.63L161.73 77.86a.819.819 0 0 1 .768 0l52.233 30.184a48.6 48.6 0 0 1-7.316 87.635v-61.391a8.544 8.544 0 0 0-4.4-7.213Zm21.742-32.69l-1.535-.922l-51.619-30.081a8.39 8.39 0 0 0-8.492 0L99.98 99.808V74.587a.716.716 0 0 1 .307-.665l52.233-30.133a48.652 48.652 0 0 1 72.236 50.391v.205ZM88.061 139.097l-21.845-12.585a.87.87 0 0 1-.41-.614V65.685a48.652 48.652 0 0 1 79.757-37.346l-1.535.87l-51.67 29.825a8.595 8.595 0 0 0-4.246 7.367l-.051 72.697Zm11.868-25.58L128.067 97.3l28.188 16.218v32.434l-28.086 16.218l-28.188-16.218l-.052-32.434Z"></path>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Build AI apps in any kind by an already integrated OpenAI API.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Create a diverse range of AI applications with ease using our pre-integrated OpenAI API.</p>
                     </div>
                 </div>
 
@@ -270,17 +314,17 @@
                             <img class="flex-shrink-0 w-12 h-auto" src="https://seeklogo.com/images/T/typeorm-logo-F243B34DEE-seeklogo.com.png" alt="" />
                             <div class="ml-5 mr-auto">
                                 <p class="text-xl font-semibold text-black">TRCP</p>
-                                <p class="mt-px text-sm text-gray-600">Server/Client communication with Strong types </p>
+                                <p class="mt-px text-sm text-gray-600">Server/Client communication Strong typed </p>
                             </div>
                             <path fill="currentColor" d="M24 12c0 6.62-5.38 12-12 12S0 18.62 0 12S5.38 0 12 0s12 5.38 12 12ZM1.21 12A10.78 10.78 0 0 0 12 22.79A10.78 10.78 0 0 0 22.79 12A10.78 10.78 0 0 0 12 1.21A10.78 10.78 0 0 0 1.21 12Zm10.915-6.086l2.162 1.248a.25.25 0 0 1 .125.217v1.103l2.473 1.428a.25.25 0 0 1 .125.217v2.355l.955.551a.25.25 0 0 1 .125.217v2.496a.25.25 0 0 1-.125.217l-2.162 1.248a.25.25 0 0 1-.25 0l-.956-.552l-2.472 1.427a.25.25 0 0 1-.25 0l-2.472-1.427l-.956.552a.25.25 0 0 1-.25 0l-2.162-1.248a.25.25 0 0 1-.125-.217V13.25a.25.25 0 0 1 .125-.217l.955-.551v-2.355a.25.25 0 0 1 .125-.217l2.473-1.428V7.38a.25.25 0 0 1 .125-.217l2.162-1.248a.25.25 0 0 1 .25 0Zm1.268 10.049a.25.25 0 0 1-.125-.217V13.25a.25.25 0 0 1 .125-.217l2.16-1.248a.25.25 0 0 1 .25 0l.707.408v-1.922l-2.098-1.21v.814a.25.25 0 0 1-.125.217l-2.162 1.248a.25.25 0 0 1-.25 0l-2.162-1.248a.25.25 0 0 1-.125-.217V9.06L7.49 10.271v1.922l.707-.408a.25.25 0 0 1 .25 0l2.16 1.248a.25.25 0 0 1 .125.217v2.496a.25.25 0 0 1-.125.217l-.705.408L12 17.582l2.098-1.211ZM10.088 9.73l1.662.96V8.766l-1.662-.955Zm3.824 0V7.811l-1.662.955v1.924ZM12 6.418l-1.66.96l1.66.954l1.66-.954Zm-5.59 9.184l1.66.958v-1.921l-1.66-.956Zm3.822 0v-1.92l-1.662.957v1.923Zm-1.91-3.311l-1.662.96l1.661.955l1.66-.956Zm5.446 3.31l1.66.96v-1.922l-1.66-.956Zm3.822 0v-1.918l-1.662.956v1.922Zm-1.912-3.31l-1.66.96l1.66.955l1.66-.956Z" style="--darkreader-inline-fill: currentColor;" data-darkreader-inline-fill=""></path>
                         </div>
-                        <p class="text-base leading-relaxed text-gray-600 mt-7">Most secured and performant backend inbuilt.</p>
+                        <p class="text-base leading-relaxed text-gray-600 mt-7">Experience the utmost security and performance with our built-in backend architecture, ensuring a robust foundation for your applications.</p>
                     </div>
                 </div>
             </div>
 
             <!-- <div class="mt-12 text-center">
-                <a href="#" title="" class="inline-flex underline p-3 font-medium text-secondary transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"> Check applications built with nujin </a>
+                <a href="#" title="" class="inline-flex underline p-3 font-medium text-secondary transition-all duration-200 hover:text-blue-700 focus:text-blue-700 hover:underline"> Check applications built with enjine </a>
             </div> -->
         </div>
     </section>
@@ -304,7 +348,7 @@
                             <span class="text-xl font-semibold text-gray-700"> 1 </span>
                         </div>
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Git</h3>
-                        <p class="mt-4 text-base text-gray-600">Git clone https://github.com/enjineDev/nujin</p>
+                        <p class="mt-4 text-base text-gray-600">Git clone https://github.com/enjineDev/enjine</p>
                     </div>
 
                     <div data-aos="fade-left" data-aos-delay="500">
@@ -335,10 +379,10 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z" />
                 </svg>
                 <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl lg:text-5xl" data-aos="fade-up" data-aos-delay="100">Get a hyper customized version</h2>
-                <p class="mt-4 text-2xl font-medium" data-aos="fade-down" data-aos-delay="100">Hire our developers to build a version fitting to your needs!</p>
+                <p class="mt-4 text-2xl font-medium" data-aos="fade-down" data-aos-delay="100">Hire our developers to build a version that perfectly aligns with your unique requirements!</p>
 
                 <div class="flex flex-col items-center justify-center px-16 mt-8 space-y-4 sm:space-y-0 sm:space-x-4 sm:flex-row lg:mt-12 sm:px-0">
-                    <NuxtLink href="#start" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-info border border-transparent rounded-md sm:w-auto hover:bg-black focus:bg-black" role="button" data-aos="fade-up" data-aos-delay="100"> Try For Free </NuxtLink>
+                    <!-- <NuxtLink href="#start" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-white transition-all duration-200 bg-info border border-transparent rounded-md sm:w-auto hover:bg-black focus:bg-black" role="button" data-aos="fade-up" data-aos-delay="100"> Try For Free </NuxtLink> -->
 
                     <NuxtLink href="#contact" title="" class="inline-flex items-center justify-center w-full px-8 py-4 text-base font-semibold text-black transition-all duration-200 bg-transparent border border-black rounded-md sm:w-auto hover:bg-black hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-up" data-aos-delay="100">
                         <svg class="w-5 h-5 mr-2 -ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -366,7 +410,7 @@
       <div class="relative px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center md:w-2/3 lg:w-1/2 xl:w-1/3 md:text-left">
           <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Stay up-to-date</h2>
-          <p class="mt-4 text-base text-gray-200" data-aos="fade-up" data-aos-delay="100">And receive the newest insights and opportunities like bonuses and more.</p>
+          <p class="mt-4 text-base text-gray-200" data-aos="fade-up" data-aos-delay="100">Stay informed and seize the latest insights and opportunities, including exclusive bonuses and more.</p>
 
           <form action="#" method="POST" class="mt-8 lg:mt-12" data-aos="zoom-out" data-aos-delay="100">
             <div class="flex flex-col items-center sm:flex-row sm:justify-center">
@@ -379,17 +423,18 @@
                     </svg>
                   </div>
                   <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Enter email address"
-                  class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
-                  required
+                    type="email"
+                    name="email"
+                    id="email"
+                     @submit.prevent="submitSubscription(email)"
+                    placeholder="Enter email address"
+                    class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                    required
                   />
                 </div>
               </div>
 
-              <button type="submit" class="inline-flex items-center justify-center flex-shrink-0 w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-accent border border-transparent rounded-md sm:mt-0 sm:rounded-l-none sm:w-auto hover:bg-info focus:bg-info">
+              <button @click="submitSubscription(email)" class="inline-flex items-center justify-center flex-shrink-0 w-auto px-4 py-4 mt-4 font-semibold text-white transition-all duration-200 bg-accent border border-transparent rounded-md sm:mt-0 sm:rounded-l-none sm:w-auto hover:bg-info focus:bg-info">
                 Get instant access
               </button>
             </div>
@@ -402,17 +447,17 @@
     <section class="anient py-10 text-white sm:py-16 lg:py-24 shadow-xl shadow-inner">
         <div class="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
             <div class="md:flex md:items-center md:justify-center md:space-x-14">
-                <div class="relative flex-shrink-0 w-48 h-48" data-aos="fade-left" data-aos-delay="100">
+                <div class="relative flex-shrink-0 w-48 h-48" data-aos="fade-down" data-aos-delay="100">
                     <div class="absolute w-48 h-48 bg-gray-300 rounded-full -bottom-2 -right-1"></div>
                     <img class="relative object-cover w-48 h-48 rounded-full" src="https://media.licdn.com/dms/image/D5603AQFjDCUDnFeLUw/profile-displayphoto-shrink_800_800/0/1690816380812?e=1706745600&v=beta&t=L7FzrDkwSwKmfJ4AEgEmcGTAFhxVCx1_aaLP5j_Lul0" alt="" />
                 </div>
 
-                <div class="mt-10 md:mt-0" data-aos="fade-right" data-aos-delay="100">
+                <div class="mt-10 md:mt-0" data-aos="fade-up" data-aos-delay="100">
                     <blockquote>
-                        <p class="text-xl">“Building webapps, AI and Crypto.”</p>
+                        <p class="text-xl">“Empowering Communities, Embracing Automation, and Shaping the Businesses of Tomorrow! ✨</p>
                     </blockquote>
-                    <p class="text-lg font-semibold mt-7">Christopher Müller</p>
-                    <p class="mt-1 text-base text-gray-600">Developer, Founder, Musician</p>
+                    <p class="text-2xl font-semibold mt-7">Christopher Müller</p>
+                    <p class="mt-1 text-base">Building webapps, AI and Crypto</p>
                 </div>
             </div>
         </div>
@@ -423,7 +468,7 @@
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-4xl font-bold text-black lg:text-5xl sm:text-5xl" data-aos="fade-down" data-aos-delay="100">Pricing &amp; Plans</h2>
-                <p class="mt-4 text-lg leading-relaxed text-gray-600" data-aos="fade-up" data-aos-delay="100">Amet minim mollit non deserunt ullam co est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                <p class="mt-4 text-lg leading-relaxed text-gray-600" data-aos="fade-up" data-aos-delay="100">Embark on your journey with our pricing options designed to cater to your unique needs.</p>
             </div>
 
             <!-- lg+ -->
@@ -908,7 +953,7 @@
         <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
             <div class="max-w-2xl mx-auto text-center">
                 <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Contact us</h2>
-                <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white" data-aos="fade-up" data-aos-delay="100">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis.</p>
+                <p class="max-w-xl mx-auto mt-4 text-base leading-relaxed text-white" data-aos="fade-up" data-aos-delay="100">Let's connect and elevate your vision together.</p>
             </div>
 
             <div class="max-w-6xl mx-auto mt-12 overflow-hidden bg-white rounded-md shadow-md lg:mt-20" data-aos="fade-up" data-aos-delay="100">
@@ -922,14 +967,14 @@
                                     <div>
                                         <label for="" class="text-base font-medium text-gray-900"> Your name </label>
                                         <div class="mt-2.5 relative">
-                                            <input type="text" name="" id="" placeholder="" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
+                                            <input type="text" v-model="contactData.name" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
                                         </div>
                                     </div>
 
                                     <div>
                                         <label for="" class="text-base font-medium text-gray-900"> Your email </label>
                                         <div class="mt-2.5 relative">
-                                            <input type="email" name="" id="" placeholder="" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
+                                            <input type="email" v-model="contactData.email" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
                                         </div>
                                     </div>
 
@@ -951,9 +996,7 @@
                                         <label for="" class="text-base font-medium text-gray-900"> Message </label>
                                         <div class="mt-2.5 relative">
                                             <textarea
-                                                name=""
-                                                id=""
-                                                placeholder=""
+                                                v-model="contactData.message"
                                                 class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md resize-y bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600"
                                                 rows="12"
                                             ></textarea>
@@ -961,7 +1004,7 @@
                                     </div>
 
                                     <div class="sm:col-span-2">
-                                        <button type="submit" class="inline-flex items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-white transition-all duration-200 bg-secondary border border-transparent rounded-md focus:outline-none hover:bg-info focus:bg-info">
+                                        <button @click="submitData(contactData)" class="inline-flex items-center justify-center w-full px-4 py-4 mt-2 text-base font-semibold text-white transition-all duration-200 bg-secondary border border-transparent rounded-md focus:outline-none hover:bg-info focus:bg-info">
                                             Send
                                         </button>
                                     </div>
@@ -1131,12 +1174,6 @@
     </section> -->
   </div>
 </template>
-
-<script setup>
-definePageMeta({
-  layout: 'none'
-})
-</script>
 
 <style lang="css">
 .anient {
