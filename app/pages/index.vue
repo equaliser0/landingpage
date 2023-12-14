@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useNotificationStore } from '../stores/notifications';
+
 const notificationStore = useNotificationStore()
 
 const contactData = ref({
