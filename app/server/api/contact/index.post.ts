@@ -19,12 +19,12 @@ export default defineEventHandler(async (event) => {
 
     // send mail with defined transport object
     const info = await transporter.sendMail({
-      from: '"nujin Mail" <no-reply@enjine.dev>', // sender address
+      from: data.email, // sender address
       to: '', // list of receivers
       subject: `New Request from ${data.name}`, // Subject line
       text: data.message, // plain text body
       // html: '<b>Hello world?</b>', // html body
-    });
+    })
 
     await contactDatabase.put(info.messageId, {
       id: uuid(),

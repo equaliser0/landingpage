@@ -1,4 +1,15 @@
 import { v4 as uuid } from 'uuid'
+import nodemailer from 'nodemailer'
+
+const transporter = nodemailer.createTransport({
+  host: '',
+  port: 465,
+  secure: true,
+  auth: {
+    user: '',
+    pass: '',
+  },
+});
 
 export default defineEventHandler(async (event) => {
   try {
@@ -14,7 +25,16 @@ export default defineEventHandler(async (event) => {
         statusMessage: 'Already subscribed! Thanks!',
       })
     }
-    
+
+    // send mail with defined transport object
+    const info = await transporter.sendMail({
+      from: email, // sender address
+      to: '', // list of receivers
+      subject: `New Subscriber`, // Subject line
+      text: email, // plain text body
+      // html: '<b>Hello world?</b>', // html body
+    })
+
     await subscribersDatabase.put(email, {
       id: uuid(),
       created: new Date().toISOString().split('T')[0],
