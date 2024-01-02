@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useClipboard } from '@vueuse/core'
 import { useNotificationStore } from '../stores/notifications';
 
 const notificationStore = useNotificationStore()
@@ -9,8 +10,33 @@ const contactData = ref({
   message: ''
 })
 
+const email = ref('')
+
+const source = 'git clone https://github.com/enjineDev/nujin'
+const { copy, copied } = useClipboard()
+
+const copyToClipboard = (source) => {
+  copy(source)
+  notificationStore.addNotification({
+    type: 'success',
+    msg: 'Copied!'
+  })
+}
+
 const submitData = async (data) => {
   try {
+    if (!data.email) {
+      return notificationStore.addNotification({
+        type: 'error',
+        msg: 'Please provide any email address'
+      })
+    }
+    if (!validEmail(data.email)) {
+      return notificationStore.addNotification({
+        type: 'error',
+        msg: 'Not a valid e-mail-address!'
+      })
+    }
     await submitContact(data)
     notificationStore.addNotification({
       type: 'success',
@@ -24,9 +50,21 @@ const submitData = async (data) => {
   }
 }
 
-const submitSubscription = async (email) => {
+const submitSubscription = async (data) => {
   try {
-    await subscribe(email)
+    if (!data) {
+      return notificationStore.addNotification({
+        type: 'error',
+        msg: 'Please provide any email address'
+      })
+    }
+    if (!validEmail(data)) {
+      return notificationStore.addNotification({
+        type: 'error',
+        msg: 'Not a valid e-mail-address!'
+      })
+    }
+    await subscribe(data)
     notificationStore.addNotification({
       type: 'success',
       msg: 'Thanks for subscribing'
@@ -64,11 +102,13 @@ definePageMeta({
 
             <NuxtLink href="#solutions" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Solutions </NuxtLink>
 
-            <NuxtLink href="#guide" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Guide </NuxtLink>
-
             <NuxtLink href="#integration" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Integrations </NuxtLink>
 
-            <NuxtLink href="#pricing" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Pricing </NuxtLink>
+            <NuxtLink href="#guide" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Guide </NuxtLink>
+
+            <NuxtLink href="#founder" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Founder </NuxtLink>
+
+            <!-- <NuxtLink href="#pricing" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Pricing </NuxtLink> -->
 
             <!-- <NuxtLink href="#demo" title="" class="text-base text-white transition-all duration-200 hover:text-opacity-80"> Demo </NuxtLink> -->
           </div>
@@ -79,17 +119,15 @@ definePageMeta({
             <NuxtLink href="#guide" title="" class="inline-flex items-center justify-center px-3 sm:px-5 py-2.5 text-sm sm:text-base font-semibold transition-all duration-200 text-white bg-white/20 hover:bg-white/40 focus:bg-white/40 rounded-lg" role="button"> Get Started </NuxtLink>
           </div>
 
-          <button type="button" class="inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800" data-aos="fade-up" data-aos-delay="100">
-            <!-- Menu open: "hidden", Menu closed: "block" -->
+          <!-- <button type="button" class="inline-flex p-2 ml-1 text-white transition-all duration-200 rounded-md sm:ml-4 lg:hidden focus:bg-gray-800 hover:bg-gray-800" data-aos="fade-up" data-aos-delay="100">
             <svg class="block w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
 
-            <!-- Menu open: "block", Menu closed: "hidden" -->
             <svg class="hidden w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
-          </button>
+          </button> -->
         </div>
       </div>
     </header>
@@ -98,7 +136,7 @@ definePageMeta({
     <section class="anient h-screen pt-24 overflow-hidden lg:pt-32 text-white">
       <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div class="max-w-xl mx-auto text-center" data-aos="fade-down" data-aos-delay="100">
-          <h2 class="text-5xl font-bold leading-tight lg:text-6xl">enjine</h2>
+          <h2 class="text-5xl font-bold leading-tight lg:text-6xl">nujin</h2>
           <p class="mt-4 leading-relaxed md:text-xl">Build with ease.</p>
         </div>
 
@@ -118,10 +156,10 @@ definePageMeta({
           </div>
         </div>
         <div class="flex flex-col items-center justify-center mt-8 space-y-4 md:space-y-0 md:space-x-4 md:flex-row lg:mt-12">
-            <a href="#" title="" class="text-sm inline-flex items-center justify-center px-4 py-4 text-black transition-all duration-200 bg-white/30 rounded-md hover:bg-black/30 hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-left" data-aos-delay="100">
+            <button @click="copyToClipboard('git clone https://github.com/enjineDev/nujin')" class="text-sm inline-flex items-center justify-center px-4 py-4 text-black transition-all duration-200 bg-white/30 rounded-md hover:bg-black/30 hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-left" data-aos-delay="100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 mr-2 -ml-1 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                git clone https://github.com/enjineDev/enjines
-            </a>
+                git clone https://github.com/enjineDev/nujin
+            </button>
 
             <a href="#features" title="" class="inline-flex items-center justify-center px-4 py-4 text-black bg-white transition-all duration-200 rounded-md hover:bg-black hover:text-white focus:bg-black focus:text-white" role="button" data-aos="fade-right" data-aos-delay="100">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
@@ -149,7 +187,7 @@ definePageMeta({
 
             <div class="grid items-center grid-cols-1 mt-12 gap-y-10 lg:grid-cols-5 sm:mt-20 gap-x-4">
                 <div class="space-y-8 lg:pr-16 xl:pr-24 lg:col-span-2 lg:space-y-12">
-                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="100">
+                    <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
                         <svg class="flex-shrink-0 text-green-500 w-9 h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
                         </svg>
@@ -159,7 +197,7 @@ definePageMeta({
                         </div>
                     </div>
 
-                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="100">
+                    <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
                         <svg class="flex-shrink-0 text-blue-600 w-9 h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
@@ -169,7 +207,7 @@ definePageMeta({
                         </div>
                     </div>
 
-                    <div class="flex items-start" data-aos="fade-right" data-aos-delay="100">
+                    <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
                         <svg class="flex-shrink-0 text-red-500 w-9 h-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                         </svg>
@@ -180,7 +218,7 @@ definePageMeta({
                     </div>
                 </div>
 
-                <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
+                <div class="lg:col-span-3" data-aos="fade-down" data-aos-delay="100">
                     <img class="w-full rounded-lg shadow-xl" src="https://cdn.rareblocks.xyz/collection/celebration/images/features/7/dashboard-screenshot.png" alt="" />
                 </div>
             </div>
@@ -196,32 +234,32 @@ definePageMeta({
             </div>
 
             <div class="grid grid-cols-1 mt-12 lg:mt-24 gap-y-12 md:grid-cols-4 gap-x-6">
-                <div class="md:px-4 lg:px-10" data-aos="fade-left" data-aos-delay="100">
-                    <img class="-rotate-1" src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+                <div class="md:px-4 lg:px-10" data-aos="fade-up" data-aos-delay="100">
+                    <img class="-rotate-1 h-32 w-64" src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Data Management</h3>
                       <p class="mt-4 text-base text-gray-600">Empower your teams with tailored internal solutions. Our data management tools facilitate efficient collaboration within your organization.</p>
                     </div>
                 </div>
 
-                <div class="md:px-4 lg:px-10" data-aos="fade-left" data-aos-delay="100">
-                    <img class="rotate-1" src="https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+                <div class="md:px-4 lg:px-10" data-aos="fade-up" data-aos-delay="100">
+                    <img class="rotate-1 object-none h-32 w-64" src="https://images.pexels.com/photos/3143813/pexels-photo-3143813.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">Content Management</h3>
                       <p class="mt-4 text-base text-gray-600">Craft and maintain captivating websites and blogs effortlessly. Our content management system enables you to showcase your brand and engage with your community seamlessly.</p>
                     </div>
                 </div>
 
-                <div class="md:px-4 lg:px-10" data-aos="fade-right" data-aos-delay="100">
-                    <img class="-rotate-1" src="https://images.pexels.com/photos/18417334/pexels-photo-18417334/free-photo-of-blue-baseball-cap-and-stickers-from-the-truepa-brothers-online-shop.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+                <div class="md:px-4 lg:px-10" data-aos="fade-up" data-aos-delay="100">
+                    <img class="-rotate-1 h-32 w-64" src="https://images.pexels.com/photos/18417334/pexels-photo-18417334/free-photo-of-blue-baseball-cap-and-stickers-from-the-truepa-brothers-online-shop.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">E-Commerce</h3>
                       <p class="mt-4 text-base text-gray-600">Take control with your own independent online shop. Our e-commerce solutions provide the platform for you to manage and grow your digital storefront with ease.</p>
                     </div>
                 </div>
 
-                <div class="md:px-4 lg:px-10" data-aos="fade-right" data-aos-delay="100">
-                    <img class="rotate-1" src="https://images.pexels.com/photos/5849559/pexels-photo-5849559.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
+                <div class="md:px-4 lg:px-10" data-aos="fade-up" data-aos-delay="100">
+                    <img class="rotate-1 h-32 w-64" src="https://images.pexels.com/photos/5849559/pexels-photo-5849559.jpeg?auto=compress&cs=tinysrgb&w=400" alt="" />
                     <div class="" data-aos="fade-down" data-aos-delay="100">
                       <h3 class="mt-8 text-xl font-semibold leading-tight text-black">SaaS</h3>
                       <p class="mt-4 text-base text-gray-600">Deliver automated services with your personalized system. Our SaaS solutions empower you to provide efficient and cutting-edge services to your audience.</p>
@@ -345,28 +383,28 @@ definePageMeta({
                 </div>
 
                 <div class="relative grid grid-cols-1 text-center gap-y-12 md:grid-cols-3 gap-x-12" data-aos="fade-up" data-aos-delay="100">
-                    <div data-aos="fade-left" data-aos-delay="100">
+                    <div data-aos="fade-up" data-aos-delay="100">
                         <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                             <span class="text-xl font-semibold text-gray-700"> 1 </span>
                         </div>
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Git</h3>
-                        <p class="mt-4 text-base text-gray-600">Git clone https://github.com/enjineDev/enjine</p>
+                        <button class="mt-4 text-base text-gray-600" @click="copyToClipboard('git clone https://github.com/enjineDev/nujin')">Git clone https://github.com/enjineDev/nujin</button>
                     </div>
 
-                    <div data-aos="fade-left" data-aos-delay="500">
+                    <div data-aos="fade-up" data-aos-delay="500">
                         <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                             <span class="text-xl font-semibold text-gray-700"> 2 </span>
                         </div>
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Install packages</h3>
-                        <p class="mt-4 text-base text-gray-600">npm i or yarn</p>
+                        <button class="mt-4 text-base text-gray-600" @click="copyToClipboard('cd nujin && npm i')">cd nujin && npm i</button>
                     </div>
 
-                    <div data-aos="fade-left" data-aos-delay="700">
+                    <div data-aos="fade-up" data-aos-delay="700">
                         <div class="flex items-center justify-center w-16 h-16 mx-auto bg-white border-2 border-gray-200 rounded-full shadow">
                             <span class="text-xl font-semibold text-gray-700"> 3 </span>
                         </div>
                         <h3 class="mt-6 text-xl font-semibold leading-tight text-black md:mt-10">Start customizing</h3>
-                        <p class="mt-4 text-base text-gray-600">yarn dev</p>
+                        <button class="mt-4 text-base text-gray-600" @click="copyToClipboard('npm run dev')">npm run dev</button>
                     </div>
                 </div>
             </div>
@@ -399,6 +437,26 @@ definePageMeta({
         </div>
     </section>
 
+    <!-- Meet the Founder -->
+    <section class="anient py-10 text-white sm:py-16 lg:py-24 shadow-xl shadow-inner" id="founder">
+      <div class="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
+        <div class="md:flex md:items-center md:justify-center md:space-x-14">
+          <div class="relative flex-shrink-0 w-48 h-48" data-aos="fade-down" data-aos-delay="100">
+            <div class="absolute w-48 h-48 bg-gray-300 rounded-full -bottom-2 -right-1"></div>
+            <img class="relative object-cover w-48 h-48 rounded-full" src="https://media.licdn.com/dms/image/D5603AQFjDCUDnFeLUw/profile-displayphoto-shrink_800_800/0/1690816380812?e=1706745600&v=beta&t=L7FzrDkwSwKmfJ4AEgEmcGTAFhxVCx1_aaLP5j_Lul0" alt="" />
+          </div>
+
+          <div class="mt-10 md:mt-0" data-aos="fade-up" data-aos-delay="100">
+            <blockquote>
+              <p class="text-xl">“Empowering Communities, Embracing Automation, and Shaping the Businesses of Tomorrow! ✨</p>
+            </blockquote>
+            <p class="text-2xl font-semibold mt-7">Christopher Müller</p>
+            <p class="mt-1 text-base">Building webapps, AI and Crypto</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Subscription -->
     <section class="relative py-10 overflow-hidden bg-black sm:py-16 lg:py-24 xl:py-32" data-aos="fade-up" data-aos-delay="100">
       <div class="absolute inset-0">
@@ -414,7 +472,7 @@ definePageMeta({
           <h2 class="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl" data-aos="fade-down" data-aos-delay="100">Stay up-to-date</h2>
           <p class="mt-4 text-base text-gray-200" data-aos="fade-up" data-aos-delay="100">Stay informed and seize the latest insights and opportunities, including exclusive bonuses and more.</p>
 
-          <form action="#" method="POST" class="mt-8 lg:mt-12" data-aos="zoom-out" data-aos-delay="100">
+          <div class="mt-8 lg:mt-12" data-aos="zoom-out" data-aos-delay="100">
             <div class="flex flex-col items-center sm:flex-row sm:justify-center">
               <div class="flex-1 w-full min-w-0 px-4 sm:px-0">
                 <div class="relative text-gray-400 focus-within:text-gray-600">
@@ -428,9 +486,10 @@ definePageMeta({
                     type="email"
                     name="email"
                     id="email"
-                     @submit.prevent="submitSubscription(email)"
+                    v-model="email"
+                    @keyup.enter="submitSubscription(email)"
                     placeholder="Enter email address"
-                    class="block w-full py-4 pl-10 pr-4 text-base text-black placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                    class="block w-full py-4 pl-10 pr-4 text-base text-white placeholder-gray-500 transition-all duration-200 border-gray-200 rounded-md sm:rounded-r-none caret-blue-600 focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
                     required
                   />
                 </div>
@@ -440,40 +499,19 @@ definePageMeta({
                 Get instant access
               </button>
             </div>
-          </form>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Meet the Founder -->
-    <section class="anient py-10 text-white sm:py-16 lg:py-24 shadow-xl shadow-inner">
-        <div class="max-w-4xl px-4 mx-auto sm:px-6 lg:px-8">
-            <div class="md:flex md:items-center md:justify-center md:space-x-14">
-                <div class="relative flex-shrink-0 w-48 h-48" data-aos="fade-down" data-aos-delay="100">
-                    <div class="absolute w-48 h-48 bg-gray-300 rounded-full -bottom-2 -right-1"></div>
-                    <img class="relative object-cover w-48 h-48 rounded-full" src="https://media.licdn.com/dms/image/D5603AQFjDCUDnFeLUw/profile-displayphoto-shrink_800_800/0/1690816380812?e=1706745600&v=beta&t=L7FzrDkwSwKmfJ4AEgEmcGTAFhxVCx1_aaLP5j_Lul0" alt="" />
-                </div>
-
-                <div class="mt-10 md:mt-0" data-aos="fade-up" data-aos-delay="100">
-                    <blockquote>
-                        <p class="text-xl">“Empowering Communities, Embracing Automation, and Shaping the Businesses of Tomorrow! ✨</p>
-                    </blockquote>
-                    <p class="text-2xl font-semibold mt-7">Christopher Müller</p>
-                    <p class="mt-1 text-base">Building webapps, AI and Crypto</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Prices -->
-    <section class="py-10 bg-white sm:py-16 lg:py-24 text-black" id="pricing">
+    <!-- <section class="py-10 bg-white sm:py-16 lg:py-24 text-black" id="pricing">
         <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="max-w-xl mx-auto text-center">
                 <h2 class="text-4xl font-bold text-black lg:text-5xl sm:text-5xl" data-aos="fade-down" data-aos-delay="100">Pricing &amp; Plans</h2>
                 <p class="mt-4 text-lg leading-relaxed text-gray-600" data-aos="fade-up" data-aos-delay="100">Embark on your journey with our pricing options designed to cater to your unique needs.</p>
             </div>
 
-            <!-- lg+ -->
             <div class="hidden mt-16 lg:block">
                 <table class="w-full">
                     <thead data-aos="fade-up" data-aos-delay="100">
@@ -483,31 +521,31 @@ definePageMeta({
                             <th class="px-4 py-8 text-center">
                                 <span class="text-base font-medium text-accent"> Core </span>
                                 <p class="mt-6 text-6xl font-bold">FREE</p>
-                                <p class="mt-2 text-base font-normal text-gray-500">for ever</p>
+                                <p class="mt-2 text-base font-normal text-gray-500">For ever</p>
                             </th>
 
                             <th class="px-4 py-8 text-center">
                                 <span class="text-base font-medium text-accent"> Custom Component </span>
-                                <p class="mt-6 text-6xl font-bold">350€</p>
-                                <p class="mt-2 text-base font-normal text-gray-500">Per month</p>
+                                <p class="mt-6 text-6xl font-bold">150€</p>
+                                <p class="mt-2 text-base font-normal text-gray-500">Per component</p>
                             </th>
 
                             <th class="px-4 py-8 text-center bg-info rounded-t-xl">
                                 <span class="px-4 py-2 text-base font-medium text-white bg-accent rounded-full"> Setup </span>
                                 <p class="mt-6 text-6xl font-bold text-white">500€</p>
-                                <p class="mt-2 text-base font-normal text-gray-200">Per month</p>
+                                <p class="mt-2 text-base font-normal text-gray-200">Per Setup</p>
                             </th>
 
                             <th class="px-4 py-8 text-center">
                                 <span class="text-base font-medium text-accent"> Enterprise </span>
-                                <p class="mt-6 text-6xl font-bold">500€</p>
-                                <p class="mt-2 text-base font-normal text-gray-500">Per month</p>
+                                <p class="mt-6 text-6xl font-bold">2.500€</p>
+                                <p class="mt-2 text-base font-normal text-gray-500">Per Month</p>
                             </th>
 
                             <th class="px-4 py-8 text-center">
-                                <span class="text-base font-medium text-accent"> Consult </span>
-                                <p class="mt-6 text-6xl font-bold">200€</p>
-                                <p class="mt-2 text-base font-normal text-gray-500">Per month</p>
+                                <span class="text-base font-medium text-accent"> Consultation </span>
+                                <p class="mt-6 text-6xl font-bold">150€</p>
+                                <p class="mt-2 text-base font-normal text-gray-500">Per Hour</p>
                             </th>
                         </tr>
                     </thead>
@@ -744,7 +782,6 @@ definePageMeta({
             </div>
         </div>
 
-        <!-- xs to lg -->
         <div class="block mt-12 border-t border-b border-gray-200 divide-y divide-gray-200 lg:hidden">
             <div class="grid grid-cols-4 text-center divide-x divide-gray-200">
                 <div class="px-2 py-2">
@@ -948,7 +985,7 @@ definePageMeta({
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Contact Us -->
     <section class="anient py-10 sm:py-16 lg:py-24" id="contact">
@@ -959,24 +996,25 @@ definePageMeta({
             </div>
 
             <div class="max-w-6xl mx-auto mt-12 overflow-hidden bg-white rounded-md shadow-md lg:mt-20" data-aos="fade-up" data-aos-delay="100">
-                <div class="grid items-stretch grid-cols-1 lg:grid-cols-5">
+                <!-- <div class="grid items-stretch grid-cols-1 lg:grid-cols-5"> -->
+                <div class="">
                     <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
                         <div class="p-6 sm:p-10">
                             <h3 class="text-2xl font-semibold text-black">Send us a message</h3>
 
-                            <form action="#" method="POST" class="mt-8">
+                            <div action="#" method="POST" class="mt-8">
                                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-4">
                                     <div>
                                         <label for="" class="text-base font-medium text-gray-900"> Your name </label>
                                         <div class="mt-2.5 relative">
-                                            <input type="text" v-model="contactData.name" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
+                                            <input type="text" required v-model="contactData.name" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
                                         </div>
                                     </div>
 
                                     <div>
                                         <label for="" class="text-base font-medium text-gray-900"> Your email </label>
                                         <div class="mt-2.5 relative">
-                                            <input type="email" v-model="contactData.email" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
+                                            <input type="email"  required v-model="contactData.email" class="block w-full px-4 py-4 text-black placeholder-gray-500 transition-all duration-200 border border-gray-200 rounded-md bg-gray-50 focus:outline-none focus:border-blue-600 focus:bg-white caret-blue-600" />
                                         </div>
                                     </div>
 
@@ -1011,11 +1049,11 @@ definePageMeta({
                                         </button>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="bg-gray-100 lg:col-span-2" data-aos="fade-right" data-aos-delay="100">
+                    <!-- <div class="bg-gray-100 lg:col-span-2" data-aos="fade-right" data-aos-delay="100">
                         <div class="h-full p-6 sm:p-10">
                             <div class="flex flex-col justify-between h-full">
                                 <div>
@@ -1151,7 +1189,7 @@ definePageMeta({
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

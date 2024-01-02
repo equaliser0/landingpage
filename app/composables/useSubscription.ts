@@ -1,5 +1,7 @@
 export const subscribe = async (email) => {
   try {
+    console.log(email);
+
     return await useFetch('/api/subscription?email=' + email, {
       method: 'POST',
     })
