@@ -21,7 +21,7 @@ const getNotifcationType = (notificationType) => {
 </script>
 
 <template>
-  <div ref="el" :style="{ 'font-family': 'Blinker' }" >
+  <div ref="el" :style="{ 'font-family': 'Blinker' }" class="bg-black">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Blinker">
 
     <!-- Notification Toasts -->
